@@ -38,11 +38,11 @@ function App() {
             <div className="card-label">Connect</div>
             <h2>Let's Connect</h2>
             <div className="social-links">
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer" title="GitHub">GitHub</a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" title="LinkedIn">LinkedIn</a>
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" title="Instagram">Instagram</a>
-              <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" title="YouTube">YouTube</a>
-              <a href="https://discord.com" target="_blank" rel="noopener noreferrer" title="Discord">Discord</a>
+              <a href="https://github.com/WL0000000" target="_blank" rel="noopener noreferrer" title="GitHub">GitHub</a>
+              <a href="https://www.linkedin.com/in/william-li-6283aa333/" target="_blank" rel="noopener noreferrer" title="LinkedIn">LinkedIn</a>
+              <a href="https://www.instagram.com/hugeburgerbigcrunch/" target="_blank" rel="noopener noreferrer" title="Instagram">Instagram</a>
+              <a href="https://www.youtube.com/@williamli8565" target="_blank" rel="noopener noreferrer" title="YouTube">YouTube</a>
+              <a href="https://discordapp.com/users/389859838378770432" target="_blank" rel="noopener noreferrer" title="Discord">Discord</a>
             </div>
           </div>
         </section>

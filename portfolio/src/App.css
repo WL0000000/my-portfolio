@@ -170,13 +170,15 @@
   color: var(--accent);
   font-weight: 600;
   font-size: 0.95rem;
-  padding: 8px 0;
-  border-bottom: 2px solid transparent;
-  transition: border-color 0.2s ease;
+  padding: 10px 12px;
+  background: rgba(209, 82, 53, 0.05);
+  border-radius: 8px;
+  transition: all 0.2s ease;
 }
 
 .social-links a:hover {
-  border-bottom-color: var(--accent);
+  background: rgba(209, 82, 53, 0.15);
+  transform: translateX(6px);
 }
 
 .section {
