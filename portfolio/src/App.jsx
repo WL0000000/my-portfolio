@@ -1,34 +1,126 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <div className="page">
+      <header className="site-header">
+        <div className="brand">William Li</div>
+        <nav className="nav">
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#skills">Skills</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </header>
+
+      <main>
+        <section className="hero" id="top">
+          <div className="hero-content">
+            <p className="eyebrow">Portfolio 2026</p>
+            <h1>
+              William Li
+              <span>Software Developer</span>
+            </h1>
+            <p className="lead">
+              Building clean, focused web experiences and learning fast.
+            </p>
+            <div className="hero-actions">
+              <a className="btn primary" href="#projects">View projects</a>
+              <a className="btn ghost" href="#contact">Get in touch</a>
+            </div>
+          </div>
+          <div className="hero-card">
+            <div className="card-label">Now</div>
+            <h2>Exploring React + Vite</h2>
+            <p>Designing a bold, modern portfolio with a focus on clarity.</p>
+          </div>
+        </section>
+
+        <section className="section" id="about">
+          <div className="section-title">
+            <h2>About</h2>
+            <p>A short intro and what I care about.</p>
+          </div>
+          <div className="about-grid">
+            <p>
+              I am William Li, a student developer based in BC. I enjoy building
+              fast, accessible sites with strong visual structure and clear
+              messaging.
+            </p>
+            <ul className="stats">
+              <li>
+                <span>Focus</span>
+                <strong>Front end systems</strong>
+              </li>
+              <li>
+                <span>Currently</span>
+                <strong>Portfolio v1</strong>
+              </li>
+              <li>
+                <span>Location</span>
+                <strong>Coquitlam, BC</strong>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <section className="section" id="projects">
+          <div className="section-title">
+            <h2>Projects</h2>
+            <p>Replace these with your real work.</p>
+          </div>
+          <div className="cards">
+            <article className="project-card">
+              <h3>Project One</h3>
+              <p>One-line summary of the problem and the result.</p>
+              <a href="#">View details</a>
+            </article>
+            <article className="project-card">
+              <h3>Project Two</h3>
+              <p>Highlight the tools used and a key outcome.</p>
+              <a href="#">View details</a>
+            </article>
+            <article className="project-card">
+              <h3>Project Three</h3>
+              <p>Share what you built and why it matters.</p>
+              <a href="#">View details</a>
+            </article>
+          </div>
+        </section>
+
+        <section className="section" id="skills">
+          <div className="section-title">
+            <h2>Skills</h2>
+            <p>Core tools and strengths.</p>
+          </div>
+          <div className="pill-grid">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+            <span>React</span>
+            <span>Vite</span>
+            <span>Git</span>
+          </div>
+        </section>
+
+        <section className="section contact" id="contact">
+          <div className="section-title">
+            <h2>Contact</h2>
+            <p>Let us build something useful.</p>
+          </div>
+          <div className="contact-card">
+            <p>Send a message to collaborate or ask a question.</p>
+            <a className="btn primary" href="mailto:your-email@example.com">
+              your-email@example.com
+            </a>
+          </div>
+        </section>
+      </main>
+
+      <footer className="site-footer">
+        <p>© 2026 William Li</p>
+      </footer>
+    </div>
   )
 }
 
