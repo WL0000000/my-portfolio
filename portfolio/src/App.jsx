@@ -147,6 +147,14 @@ function App() {
           <p className="footer-copyright">© 2026 William Li</p>
         </div>
         <div className="footer-right">
+          <div className="footer-logos">
+            <a href="https://www.sfu.ca/fas/study/future-undergraduates/programs/major/software-systems-bachelor-science.html" target="_blank" rel="noopener noreferrer" title="Simon Fraser University">
+              <img src="/sfu-logo.png" alt="Simon Fraser University" className="footer-logo" />
+            </a>
+            <a href="https://sfussss.org/" target="_blank" rel="noopener noreferrer" title="Software Systems Program">
+              <img src="/sse-logo.png" alt="Software Systems Engineering" className="footer-logo" />
+            </a>
+          </div>
         </div>
       </footer>
     </div>
