@@ -54,10 +54,10 @@ function App() {
             <p>A short intro and what I care about.</p>
           </div>
           <div className="about-grid">
-            <p>
-              Hi! I'm William Li, a Software Systems student at SFU and aspiring Software Developer.
-              I enjoy building everything from games to secure systems. Currently, my passion lies within game development, where I focus on creating 
-              fun and engaging experiences for users on Roblox. I have a background in full-stack development, and I am always eager to learn new technologies and improve my skills.
+            <p >
+              Hi! I'm William Li, a Software Systems student at SFU and aspiring Software Developer.<br/><br/>
+              I enjoy building everything from games to secure systems. Currently, my passion lies within game development, where I focus on creating fun and engaging experiences for users on Roblox.<br/><br/>
+              I have a background in full-stack development, and I am always eager to learn new technologies and improve my skills.
             </p>
             <ul className="stats">
               <li>
@@ -66,7 +66,7 @@ function App() {
               </li>
               <li>
                 <span><FaGamepad /> Hobbies</span>
-                <strong>Gaming, Gym, Drawing </strong>
+                <strong>Gaming, Gym, Art </strong>
               </li>
               <li>
                 <span><FaMapMarkerAlt /> Location</span>
