@@ -130,7 +130,24 @@ function App() {
       </main>
 
       <footer className="site-footer">
-        <p>© 2026 William Li</p>
+        <div className="footer-left">
+          <div className="footer-name">William Li</div>
+          <p className="footer-email">wla230@sfu.ca</p>
+          <div className="footer-icons">
+            <a href="https://github.com/WL0000000" target="_blank" rel="noopener noreferrer" title="GitHub">
+              <FaGithub />
+            </a>
+            <a href="https://www.linkedin.com/in/william-li-6283aa333/" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+              <FaLinkedin />
+            </a>
+            <a href="https://discordapp.com/users/389859838378770432" target="_blank" rel="noopener noreferrer" title="Discord">
+              <FaDiscord />
+            </a>
+          </div>
+          <p className="footer-copyright">© 2026 William Li</p>
+        </div>
+        <div className="footer-right">
+        </div>
       </footer>
     </div>
   )
