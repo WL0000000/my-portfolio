@@ -4,7 +4,7 @@
   padding: 40px 24px 64px;
   display: flex;
   flex-direction: column;
-  gap: 64px;
+  gap: 96px;
 }
 
 .site-header {
@@ -12,12 +12,22 @@
   align-items: center;
   justify-content: space-between;
   gap: 24px;
+  padding: 16px 24px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: var(--surface);
+  box-shadow: 0 2px 8px rgba(16, 19, 20, 0.04);
 }
 
 .brand {
   font-family: var(--font-display);
   font-size: 1.6rem;
   letter-spacing: 0.02em;
+  font-weight: 700;
+  background: linear-gradient(135deg, #d15235 0%, #e67e22 50%, #f39c12 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .nav {
@@ -89,6 +99,8 @@
   border-radius: 999px;
   border: 1px solid transparent;
   font-weight: 600;
+  transition: all 0.2s ease;
+  cursor: pointer;
 }
 
 .btn.primary {
@@ -96,9 +108,22 @@
   color: var(--surface);
 }
 
+.btn.primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(209, 82, 53, 0.25);
+}
+
 .btn.ghost {
   border-color: var(--border);
   color: var(--text-primary);
+  background: var(--surface);
+}
+
+.btn.ghost:hover {
+  border-color: var(--accent);
+  background: var(--surface);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(16, 19, 20, 0.1);
 }
 
 .hero-card {
@@ -222,7 +247,7 @@
 @media (max-width: 900px) {
   .page {
     padding: 32px 20px 48px;
-    gap: 48px;
+    gap: 64px;
   }
 
   .hero {
@@ -246,7 +271,7 @@
 @media (max-width: 640px) {
   .page {
     padding: 24px 16px 40px;
-    gap: 40px;
+    gap: 48px;
   }
 
   .site-header {

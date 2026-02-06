@@ -22,10 +22,10 @@ function App() {
               <span>Software Developer</span>
             </h1>
             <p className="lead">
-              Building clean, focused web experiences and learning fast.
+              Hi! I'm William Li, a Software Systems student at SFU and aspiring Software Engineer.
             </p>
             <div className="hero-actions">
-              <a className="btn primary" href="#projects">View projects</a>
+              <a className="btn primary" href="https://drive.google.com/file/d/YOUR_RESUME_ID/view" target="_blank" rel="noopener noreferrer">Resume</a>
               <a className="btn ghost" href="#contact">Get in touch</a>
             </div>
           </div>
