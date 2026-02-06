@@ -1,12 +1,17 @@
 import './App.css'
 import { useInView } from './useInView'
 import { FaGithub, FaLinkedin, FaInstagram, FaYoutube, FaDiscord, FaBullseye, FaGamepad, FaMapMarkerAlt } from 'react-icons/fa'
+import { useEffect } from 'react'
 
 function App() {
   const [aboutRef, aboutInView] = useInView()
   const [projectsRef, projectsInView] = useInView()
   const [skillsRef, skillsInView] = useInView()
   const [contactRef, contactInView] = useInView()
+
+  useEffect(() => {
+    // Mouse tracking removed - using simple inset box-shadow instead
+  }, [])
   return (
     <div className="page">
       <header className="site-header">
@@ -57,7 +62,7 @@ function App() {
             <p >
               Hi! I'm William Li, a Software Systems student at SFU and aspiring Software Developer.<br/><br/>
               I enjoy building everything from games to secure systems. Currently, my passion lies within game development, where I focus on creating fun and engaging experiences for users on Roblox.<br/><br/>
-              I have a background in full-stack development, and I am always eager to learn new technologies and improve my skills.
+              I have a background in full-stack development, and I am always eager to learn new technologies and improve my skills!
             </p>
             <ul className="stats">
               <li>
@@ -66,7 +71,7 @@ function App() {
               </li>
               <li>
                 <span><FaGamepad /> Hobbies</span>
-                <strong>Gaming, Gym, Art </strong>
+                <strong>Gaming, Gym, Art, Music Production</strong>
               </li>
               <li>
                 <span><FaMapMarkerAlt /> Location</span>
@@ -169,7 +174,7 @@ function App() {
               <img src="/sfu-logo.png" alt="Simon Fraser University" className="footer-logo" />
             </a>
             <a href="https://sfussss.org/" target="_blank" rel="noopener noreferrer" title="Software Systems Program">
-              <img src="/sse-logo.png" alt="Software Systems Engineering" className="footer-logo" />
+              <img src="/logo.png" alt="Software Systems Engineering" className="footer-logo" />
             </a>
           </div>
         </div>

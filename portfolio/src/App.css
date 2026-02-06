@@ -19,7 +19,7 @@
   padding: 40px 24px 64px;
   display: flex;
   flex-direction: column;
-  gap: 96px;
+  gap: 140px;
 }
 
 .site-header {
@@ -172,11 +172,29 @@
   font-size: 0.95rem;
   padding: 10px 12px;
   background: rgba(209, 82, 53, 0.05);
+  border: 1px solid var(--border);
   border-radius: 8px;
   transition: all 0.2s ease;
   display: flex;
   align-items: center;
   gap: 8px;
+  position: relative;
+  overflow: hidden;
+  --mouse-x: 50%;
+  --mouse-y: 50%;
+  z-index: 0;
+}
+
+.social-links a svg,
+.social-links a::after {
+  position: relative;
+  z-index: 2;
+}
+
+.social-links a:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(209, 82, 53, 0.1), inset 0 0 15px rgba(209, 82, 53, 0.12);
 }
 
 .social-links a svg {
@@ -194,12 +212,23 @@
   display: flex;
   flex-direction: column;
   gap: 24px;
+  margin-bottom: 80px;
+}
+
+#projects .section-title,
+#skills .section-title,
+#contact .section-title {
+  text-align: center;
 }
 
 .section-title h2 {
   font-family: var(--font-display);
   font-size: 2rem;
   margin-bottom: 6px;
+  background: linear-gradient(135deg, #d15235 0%, #e67e22 50%, #f39c12 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .section-title p {
@@ -232,6 +261,17 @@
   border: 1px solid var(--border);
   border-radius: 16px;
   background: rgba(209, 82, 53, 0.08);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  --mouse-x: 50%;
+  --mouse-y: 50%;
+}
+
+.stats li:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(209, 82, 53, 0.1), inset 0 0 20px rgba(209, 82, 53, 0.15);
 }
 
 .stats span {
@@ -434,7 +474,7 @@
 @media (max-width: 900px) {
   .page {
     padding: 32px 20px 48px;
-    gap: 64px;
+    gap: 100px;
   }
 
   .hero {
@@ -458,7 +498,7 @@
 @media (max-width: 640px) {
   .page {
     padding: 24px 16px 40px;
-    gap: 48px;
+    gap: 80px;
   }
 
   .site-header {
@@ -560,6 +600,7 @@
 @media (max-width: 400px) {
   .page {
     padding: 20px 12px 32px;
+    gap: 60px;
   }
 
   .nav {
