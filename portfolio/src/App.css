@@ -1,3 +1,18 @@
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
 .page {
   max-width: 1100px;
   margin: 0 auto;
@@ -142,6 +157,26 @@
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--text-muted);
+}
+
+.social-links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.social-links a {
+  color: var(--accent);
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 8px 0;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.2s ease;
+}
+
+.social-links a:hover {
+  border-bottom-color: var(--accent);
 }
 
 .section {
@@ -312,6 +347,14 @@
 
   .hero-card {
     padding: 20px;
+  }
+
+  .social-links {
+    gap: 8px;
+  }
+
+  .social-links a {
+    font-size: 0.9rem;
   }
 
   .section-title h2 {

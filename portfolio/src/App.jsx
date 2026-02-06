@@ -1,6 +1,11 @@
 import './App.css'
+import { useInView } from './useInView'
 
 function App() {
+  const [aboutRef, aboutInView] = useInView()
+  const [projectsRef, projectsInView] = useInView()
+  const [skillsRef, skillsInView] = useInView()
+  const [contactRef, contactInView] = useInView()
   return (
     <div className="page">
       <header className="site-header">
@@ -30,13 +35,19 @@ function App() {
             </div>
           </div>
           <div className="hero-card">
-            <div className="card-label">Now</div>
-            <h2>Exploring React + Vite</h2>
-            <p>Designing a bold, modern portfolio with a focus on clarity.</p>
+            <div className="card-label">Connect</div>
+            <h2>Let's Connect</h2>
+            <div className="social-links">
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer" title="GitHub">GitHub</a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" title="LinkedIn">LinkedIn</a>
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" title="Instagram">Instagram</a>
+              <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" title="YouTube">YouTube</a>
+              <a href="https://discord.com" target="_blank" rel="noopener noreferrer" title="Discord">Discord</a>
+            </div>
           </div>
         </section>
 
-        <section className="section" id="about">
+        <section className={`section ${aboutInView ? 'fade-in' : ''}`} ref={aboutRef} id="about">
           <div className="section-title">
             <h2>About</h2>
             <p>A short intro and what I care about.</p>
@@ -64,7 +75,7 @@ function App() {
           </div>
         </section>
 
-        <section className="section" id="projects">
+        <section className={`section ${projectsInView ? 'fade-in' : ''}`} ref={projectsRef} id="projects">
           <div className="section-title">
             <h2>Projects</h2>
             <p>Replace these with your real work.</p>
@@ -88,7 +99,7 @@ function App() {
           </div>
         </section>
 
-        <section className="section" id="skills">
+        <section className={`section ${skillsInView ? 'fade-in' : ''}`} ref={skillsRef} id="skills">
           <div className="section-title">
             <h2>Skills</h2>
             <p>Core tools and strengths.</p>
@@ -103,7 +114,7 @@ function App() {
           </div>
         </section>
 
-        <section className="section contact" id="contact">
+        <section className={`section contact ${contactInView ? 'fade-in' : ''}`} ref={contactRef} id="contact">
           <div className="section-title">
             <h2>Contact</h2>
             <p>Let us build something useful.</p>
