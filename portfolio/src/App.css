@@ -305,7 +305,7 @@
 
 .footer-name {
   font-weight: 700;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   background: linear-gradient(135deg, #d15235 0%, #e67e22 50%, #f39c12 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -314,7 +314,7 @@
 
 .footer-email {
   color: var(--text-muted);
-  font-size: 0.9rem;
+  font-size: 1.1rem;
   margin: 0;
 }
 
@@ -326,7 +326,7 @@
 
 .footer-icons a {
   color: var(--accent);
-  font-size: 1.4rem;
+  font-size: 1.8rem;
   transition: all 0.2s ease;
   display: flex;
   align-items: center;
@@ -339,15 +339,58 @@
 
 .footer-copyright {
   color: var(--text-muted);
-  font-size: 0.85rem;
+  font-size: 1.05rem;
   margin: 0;
-  padding-top: 32px;
+}
+
+.footer-bottom {
+  padding-top: 58px;
 }
 
 .footer-right {
   display: flex;
-  align-items: flex-start;
+  flex-direction: column;
+  align-items: flex-end;
   justify-content: flex-end;
+  gap: 32px;
+}
+
+.footer-nav-section {
+  display: flex;
+  flex-direction: row;
+  gap: 48px;
+  align-items: flex-start;
+  margin-left: 0;
+}
+
+.footer-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.footer-nav:first-of-type {
+  flex-shrink: 0;
+  margin-right: auto;
+}
+
+.footer-nav-heading {
+  font-weight: 700;
+  color: var(--text-primary);
+  font-size: 1.25rem;
+  margin: 0 0 4px 0;
+  letter-spacing: 0.5px;
+}
+
+.footer-nav a {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 1.05rem;
+  transition: color 0.2s ease;
+}
+
+.footer-nav a:hover {
+  color: var(--accent);
 }
 
 .footer-logos {
@@ -360,15 +403,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: transform 0.2s ease;
+  transition: all 0.2s ease;
 }
 
 .footer-logos a:hover {
-  transform: scale(1.08);
+  transform: translateY(-3px);
 }
 
 .footer-logo {
-  height: 60px;
+  height: 26px;
   width: auto;
   object-fit: contain;
   opacity: 0.8;
@@ -484,15 +527,24 @@
   }
 
   .footer-right {
-    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .footer-nav-section {
+    margin-left: 0;
+    flex-wrap: wrap;
+  }
+
+  .footer-nav {
+    gap: 6px;
   }
 
   .footer-logos {
-    gap: 16px;
+    gap: 12px;
   }
 
   .footer-logo {
-    height: 50px;
+    height: 24px;
   }
 }
 

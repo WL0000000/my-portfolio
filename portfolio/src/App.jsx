@@ -144,9 +144,26 @@ function App() {
               <FaDiscord />
             </a>
           </div>
-          <p className="footer-copyright">© 2026 William Li</p>
+          <div className="footer-bottom">
+            <p className="footer-copyright">© 2026 William Li</p>
+          </div>
         </div>
         <div className="footer-right">
+          <div className="footer-nav-section">
+            <div className="footer-nav">
+              <p className="footer-nav-heading">Landing</p>
+              <a href="#about">About Me</a>
+              <a href="#skills">Skills</a>
+              <a href="#projects">Projects</a>
+              <a href="#contact">Contact</a>
+            </div>
+            <div className="footer-nav">
+              <p className="footer-nav-heading">Pages</p>
+              <a href="/">Home</a>
+              <a href="/resume">Resume</a>
+              <a href="/blog">Blog</a>
+            </div>
+          </div>
           <div className="footer-logos">
             <a href="https://www.sfu.ca/fas/study/future-undergraduates/programs/major/software-systems-bachelor-science.html" target="_blank" rel="noopener noreferrer" title="Simon Fraser University">
               <img src="/sfu-logo.png" alt="Simon Fraser University" className="footer-logo" />
