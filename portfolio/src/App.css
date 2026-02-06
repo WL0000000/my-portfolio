@@ -358,9 +358,9 @@
 .footer-nav-section {
   display: flex;
   flex-direction: row;
-  gap: 48px;
+  gap: 80px;
   align-items: flex-start;
-  margin-left: 0;
+  transform: translateX(-40px);
 }
 
 .footer-nav {
