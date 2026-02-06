@@ -211,10 +211,11 @@
   grid-template-columns: minmax(0, 1.3fr) minmax(0, 0.7fr);
   gap: 24px;
   align-items: start;
-  padding: 24px;
+  padding: 40px;
   border: 1px solid var(--border);
   border-radius: 20px;
   background: var(--surface);
+  line-height: 1.8;
 }
 
 .stats {
@@ -230,7 +231,7 @@
   padding: 16px;
   border: 1px solid var(--border);
   border-radius: 16px;
-  background: var(--surface);
+  background: rgba(209, 82, 53, 0.08);
 }
 
 .stats span {
@@ -240,6 +241,14 @@
   letter-spacing: 0.2em;
   color: var(--text-muted);
   margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.stats span svg {
+  color: var(--accent);
+  font-size: 1.1rem;
 }
 
 .cards {

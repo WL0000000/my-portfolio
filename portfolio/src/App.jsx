@@ -1,6 +1,6 @@
 import './App.css'
 import { useInView } from './useInView'
-import { FaGithub, FaLinkedin, FaInstagram, FaYoutube, FaDiscord } from 'react-icons/fa'
+import { FaGithub, FaLinkedin, FaInstagram, FaYoutube, FaDiscord, FaBullseye, FaGamepad, FaMapMarkerAlt } from 'react-icons/fa'
 
 function App() {
   const [aboutRef, aboutInView] = useInView()
@@ -28,7 +28,7 @@ function App() {
               <span>Software Developer</span>
             </h1>
             <p className="lead">
-              Hi! I'm William Li, a Software Systems student at SFU and aspiring Software Engineer.
+              Software Systems @ SFU
             </p>
             <div className="hero-actions">
               <a className="btn primary" href="https://drive.google.com/file/d/temp/view" target="_blank" rel="noopener noreferrer">Resume</a>
@@ -55,21 +55,21 @@ function App() {
           </div>
           <div className="about-grid">
             <p>
-              I am William Li, a student developer based in BC. I enjoy building
-              fast, accessible sites with strong visual structure and clear
-              messaging.
+              Hi! I'm William Li, a Software Systems student at SFU and aspiring Software Developer.
+              I enjoy building everything from games to secure systems. Currently, my passion lies within game development, where I focus on creating 
+              fun and engaging experiences for users on Roblox. I have a background in full-stack development, and I am always eager to learn new technologies and improve my skills.
             </p>
             <ul className="stats">
               <li>
-                <span>Focus</span>
-                <strong>Front end systems</strong>
+                <span><FaBullseye /> Focus</span>
+                <strong>FullStack Development</strong>
               </li>
               <li>
-                <span>Currently</span>
-                <strong>Portfolio v1</strong>
+                <span><FaGamepad /> Hobbies</span>
+                <strong>Gaming, Gym, Drawing </strong>
               </li>
               <li>
-                <span>Location</span>
+                <span><FaMapMarkerAlt /> Location</span>
                 <strong>Coquitlam, BC</strong>
               </li>
             </ul>
