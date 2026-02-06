@@ -10,7 +10,7 @@
 }
 
 .fade-in {
-  animation: fadeInUp 0.6s ease-out forwards;
+  animation: fadeInUp 0.9s ease-out forwards;
 }
 
 .page {
@@ -174,6 +174,15 @@
   background: rgba(209, 82, 53, 0.05);
   border-radius: 8px;
   transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.social-links a svg {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
 }
 
 .social-links a:hover {
