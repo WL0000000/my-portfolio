@@ -1,7 +1,6 @@
 import './App.css'
 import { useInView } from './useInView'
 import { FaGithub, FaLinkedin, FaInstagram, FaYoutube, FaDiscord, FaBullseye, FaGamepad, FaMapMarkerAlt } from 'react-icons/fa'
-import { useEffect } from 'react'
 
 function App() {
   const [aboutRef, aboutInView] = useInView()
@@ -9,17 +8,14 @@ function App() {
   const [skillsRef, skillsInView] = useInView()
   const [contactRef, contactInView] = useInView()
 
-  useEffect(() => {
-    // Mouse tracking removed - using simple inset box-shadow instead
-  }, [])
   return (
     <div className="page">
       <header className="site-header">
         <div className="brand">William Li</div>
         <nav className="nav">
           <a href="#about">About</a>
-          <a href="#projects">Projects</a>
           <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
           <a href="#contact">Contact</a>
         </nav>
       </header>
@@ -81,6 +77,21 @@ function App() {
           </div>
         </section>
 
+        <section className={`section ${skillsInView ? 'fade-in' : ''}`} ref={skillsRef} id="skills">
+          <div className="section-title">
+            <h2>Skills</h2>
+            <p>Core tools I work with.</p>
+          </div>
+          <div className="skills-boxes">
+            <div className="skill-box">
+              <h3>Programming/Development</h3>
+            </div>
+            <div className="skill-box">
+              <h3>Web/Frontend</h3>
+            </div>
+          </div>
+        </section>
+
         <section className={`section ${projectsInView ? 'fade-in' : ''}`} ref={projectsRef} id="projects">
           <div className="section-title">
             <h2>Projects</h2>
@@ -102,21 +113,6 @@ function App() {
               <p>Share what you built and why it matters.</p>
               <a href="#">View details</a>
             </article>
-          </div>
-        </section>
-
-        <section className={`section ${skillsInView ? 'fade-in' : ''}`} ref={skillsRef} id="skills">
-          <div className="section-title">
-            <h2>Skills</h2>
-            <p>Core tools and strengths.</p>
-          </div>
-          <div className="pill-grid">
-            <span>HTML</span>
-            <span>CSS</span>
-            <span>JavaScript</span>
-            <span>React</span>
-            <span>Vite</span>
-            <span>Git</span>
           </div>
         </section>
 
