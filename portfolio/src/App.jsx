@@ -29,7 +29,7 @@ function App() {
             <p className="eyebrow">Portfolio 2026</p>
             <h1>
               William Li
-              <span>Software Developer</span>
+              <span>Student Software Developer</span>
             </h1>
             <p className="lead">
               Software Systems @ SFU
@@ -149,22 +149,19 @@ function App() {
         <section className={`section ${projectsInView ? 'fade-in' : ''}`} ref={projectsRef} id="projects">
           <div className="section-title">
             <h2>Projects</h2>
-            <p>Replace these with your real work.</p>
+            <p>Solo and collaborative projects I've worked on.</p>
           </div>
           <div className="cards">
-            <article className="project-card">
-              <h3>Project One</h3>
-              <p>One-line summary of the problem and the result.</p>
-              <a href="#">View details</a>
-            </article>
+            <a href="https://devpost.com/software/escape-from-windows" target="_blank" rel="noopener noreferrer" className="project-card project-card-featured">
+              <div className="project-content">
+                <div className="project-badge">🏆 SystemHacks 2026 Winner</div>
+                <h3>Escape From Windows</h3>
+                <p>Point and click puzzle game</p>
+              </div>
+            </a>
             <article className="project-card">
               <h3>Project Two</h3>
               <p>Highlight the tools used and a key outcome.</p>
-              <a href="#">View details</a>
-            </article>
-            <article className="project-card">
-              <h3>Project Three</h3>
-              <p>Share what you built and why it matters.</p>
               <a href="#">View details</a>
             </article>
           </div>
@@ -177,8 +174,15 @@ function App() {
           </div>
           <div className="contact-card">
             <p>Send a message to collaborate or ask a question.</p>
-            <a className="btn primary" href="mailto:your-email@example.com">
-              your-email@example.com
+            <a 
+              className="btn primary" 
+              href="mailto:wla230@sfu.ca"
+              onClick={(e) => {
+                e.preventDefault();
+                window.location.href = 'mailto:wla230@sfu.ca';
+              }}
+            >
+              wla230@sfu.ca
             </a>
           </div>
         </section>

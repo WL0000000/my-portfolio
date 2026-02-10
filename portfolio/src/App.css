@@ -303,18 +303,93 @@
 
 .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 20px;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
 }
 
 .project-card {
   padding: 20px;
   border-radius: 18px;
-  border: 1px solid var(--border);
+  border: 2px solid transparent;
   background: var(--surface);
+  background-clip: padding-box;
   display: flex;
   flex-direction: column;
   gap: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+.project-card::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #d15235 0%, #e67e22 50%, #f39c12 100%);
+  z-index: -1;
+}
+
+.project-card-featured {
+  background-image: url('/Screenshot 2026-02-09 230135.png');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  min-height: 350px;
+  color: white;
+  text-decoration: none;
+  justify-content: flex-end;
+  padding: 0;
+  border-radius: 16px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  box-shadow: 0 0 0 2px #d15235;
+}
+
+.project-card-featured::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0.8) 100%);
+  z-index: 0;
+  border-radius: 16px;
+  pointer-events: none;
+}
+
+.project-content {
+  position: relative;
+  z-index: 1;
+  padding: 24px;
+  margin-top: auto;
+}
+
+.project-card-featured h3,
+.project-card-featured p {
+  color: white;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+.project-card-featured h3 {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.project-card-featured:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 24px rgba(209, 82, 53, 0.3);
+}
+
+.project-badge {
+  display: inline-block;
+  padding: 6px 12px;
+  background: rgba(209, 82, 53, 0.9);
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  align-self: flex-start;
 }
 
 .project-card a {
