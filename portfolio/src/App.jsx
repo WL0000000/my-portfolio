@@ -1,4 +1,5 @@
 import './App.css'
+import { Link } from 'react-router-dom'
 import { useInView } from './useInView'
 import { FaGithub, FaLinkedin, FaInstagram, FaYoutube, FaDiscord, FaBullseye, FaGamepad, FaMapMarkerAlt } from 'react-icons/fa'
 
@@ -6,6 +7,7 @@ function App() {
   const [aboutRef, aboutInView] = useInView()
   const [projectsRef, projectsInView] = useInView()
   const [skillsRef, skillsInView] = useInView()
+  const [experienceRef, experienceInView] = useInView()
   const [contactRef, contactInView] = useInView()
 
   return (
@@ -15,6 +17,7 @@ function App() {
         <nav className="nav">
           <a href="#about">About</a>
           <a href="#skills">Skills</a>
+          <a href="#experience">Experience</a>
           <a href="#projects">Projects</a>
           <a href="#contact">Contact</a>
         </nav>
@@ -67,7 +70,7 @@ function App() {
               </li>
               <li>
                 <span><FaGamepad /> Hobbies</span>
-                <strong>Gaming, Gym, Art, Music Production</strong>
+                <strong>Competitive Gaming, Game Development, Music Production</strong>
               </li>
               <li>
                 <span><FaMapMarkerAlt /> Location</span>
@@ -84,10 +87,61 @@ function App() {
           </div>
           <div className="skills-boxes">
             <div className="skill-box">
-              <h3>Programming/Development</h3>
+              <h3>Programming/Backend</h3>
+              <div className="skill-pills">
+                <span>Python</span>
+                <span>Java</span>
+                <span>C++</span>
+                <span>C</span>
+                <span>C#</span>
+                <span>Lua</span>
+              </div>
             </div>
             <div className="skill-box">
               <h3>Web/Frontend</h3>
+              <div className="skill-pills">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+                <span>React</span>
+                <span>TypeScript</span>
+                <span>Node.js</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className={`section ${experienceInView ? 'fade-in' : ''}`} ref={experienceRef} id="experience">
+          <div className="section-title">
+            <h2>Experience</h2>
+            <p>My professional journey and work experience.</p>
+          </div>
+          <div className="experience-timeline">
+            <div className="experience-item">
+              <div className="experience-item-content">
+                <img src="/0eeeb19633422b1241f4306419a0f15f39d58de9.png" alt="Roblox Game Developer" className="experience-icon" />
+                <div className="experience-text">
+                  <div className="experience-header">
+                    <h3>Roblox Game Developer</h3>
+                    <span className="experience-date">Jul 2025 - Present</span>
+                  </div>
+                  <p className="experience-company">Independent Developer</p>
+                  <p className="experience-description">🖥️ Full-stack game development</p>
+                </div>
+              </div>
+            </div>
+            <div className="experience-item">
+              <div className="experience-item-content">
+                <img src="/Adobe Express - file.png" alt="Software Systems" className="experience-icon" />
+                <div className="experience-text">
+                  <div className="experience-header">
+                    <h3>Software Systems</h3>
+                    <span className="experience-date">Sept 2024 - Present</span>
+                  </div>
+                  <p className="experience-company">Simon Fraser University</p>
+                  <p className="experience-description">🎓 Currently studying Software Systems at Simon Fraser University</p>
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -155,14 +209,15 @@ function App() {
               <p className="footer-nav-heading">Landing</p>
               <a href="#about">About Me</a>
               <a href="#skills">Skills</a>
+              <a href="#experience">Experience</a>
               <a href="#projects">Projects</a>
               <a href="#contact">Contact</a>
             </div>
             <div className="footer-nav">
               <p className="footer-nav-heading">Pages</p>
               <a href="/">Home</a>
-              <a href="/resume">Resume</a>
-              <a href="/blog">Blog</a>
+              <a href="https://drive.google.com/file/d/temp/view" target="_blank" rel="noopener noreferrer">Resume</a>
+              <Link to="/blog">Blog</Link>
             </div>
           </div>
           <div className="footer-logos">
@@ -170,7 +225,7 @@ function App() {
               <img src="/sfu-logo.png" alt="Simon Fraser University" className="footer-logo" />
             </a>
             <a href="https://sfussss.org/" target="_blank" rel="noopener noreferrer" title="Software Systems Program">
-              <img src="/logo.png" alt="Software Systems Engineering" className="footer-logo" />
+              <img src="/Adobe Express - file (1).png" alt="Software Systems Engineering" className="footer-logo" />
             </a>
           </div>
         </div>
