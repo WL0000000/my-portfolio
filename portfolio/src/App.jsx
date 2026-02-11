@@ -4,7 +4,7 @@ import { useInView } from './useInView'
 import { FaGithub, FaLinkedin, FaInstagram, FaYoutube, FaDiscord, FaBullseye, FaGamepad, FaMapMarkerAlt, FaPython, FaJava, FaHtml5, FaCss3Alt, FaReact, FaFileAlt, FaEnvelope, FaDocker, FaGitAlt, FaUbuntu, FaLinux } from 'react-icons/fa'
 import { FaNodeJs } from 'react-icons/fa6'
 import { IoLogoJavascript } from 'react-icons/io5'
-import { SiCplusplus, SiLua, SiC, SiClerk, SiFastapi, SiTypescript, SiPostgresql, SiSqlite, SiMongodb } from 'react-icons/si'
+import { SiCplusplus, SiLua, SiC, SiClerk, SiFastapi, SiTypescript, SiPostgresql, SiSqlite, SiMongodb, SiRobloxstudio, SiVite } from 'react-icons/si'
 import { TbSql, TbApi, TbH2 } from 'react-icons/tb'
 
 function App() {
@@ -158,6 +158,10 @@ function App() {
                   <SiTypescript />
                   <span className="skill-name">TypeScript</span>
                 </span>
+                <span className="skill-icon">
+                  <SiVite />
+                  <span className="skill-name">Vite</span>
+                </span>
               </div>
             </div>
             <div className="skill-box">
@@ -203,6 +207,10 @@ function App() {
                 <span className="skill-icon">
                   <FaGithub />
                   <span className="skill-name">GitHub</span>
+                </span>
+                <span className="skill-icon">
+                  <SiRobloxstudio />
+                  <span className="skill-name">Roblox Studio</span>
                 </span>
               </div>
             </div>
