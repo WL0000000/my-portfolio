@@ -120,12 +120,13 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 12px 20px;
-  border-radius: 999px;
+  padding: 9px 18px;
+  border-radius: 12px;
   border: 1px solid transparent;
   font-weight: 600;
   transition: all 0.2s ease;
   cursor: pointer;
+  gap: 8px;
 }
 
 .btn.primary {
@@ -333,9 +334,7 @@
 }
 
 .project-card-featured {
-  background-image: url('/Screenshot 2026-02-09 230135.png');
-  background-size: cover;
-  background-position: center;
+  background: transparent;
   position: relative;
   min-height: 350px;
   color: white;
@@ -343,9 +342,21 @@
   justify-content: flex-end;
   padding: 0;
   border-radius: 16px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: box-shadow 0.3s ease;
   overflow: hidden;
   box-shadow: 0 0 0 2px #6366f1;
+}
+
+.project-card-featured::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('/Screenshot 2026-02-09 230135.png');
+  background-size: cover;
+  background-position: center;
+  border-radius: 16px;
+  transition: transform 0.3s ease;
+  z-index: -1;
 }
 
 .project-card-featured::before {
@@ -377,8 +388,11 @@
 }
 
 .project-card-featured:hover {
+  box-shadow: 0 0 0 2px #6366f1, 0 12px 24px rgba(99, 102, 241, 0.3);
+}
+
+.project-card-featured:hover::after {
   transform: scale(1.05);
-  box-shadow: 0 12px 24px rgba(99, 102, 241, 0.3);
 }
 
 .project-badge {
@@ -483,7 +497,7 @@
 }
 
 .skill-pills .skill-icon {
-  padding: 8px 12px 18px;
+  padding: 8px 0 14px;
   border-radius: 16px;
   background: rgba(255, 255, 255, 0.08);
   border: 1px solid rgba(99, 102, 241, 0.3);
@@ -498,9 +512,10 @@
   min-width: 60px;
   width: 100%;
   max-width: 140px;
-  min-height: 88px;
+  min-height: 80px;
   cursor: pointer;
   position: relative;
+  box-sizing: border-box;
 }
 
 .skill-pills .skill-icon svg {
@@ -513,7 +528,7 @@
 
 .skill-pills .skill-icon .skill-name {
   font-size: 0.9rem;
-  font-weight: 600;
+  font-weight: 400;
   line-height: 1.1;
   opacity: 0;
   transform: translateY(-5px);
@@ -539,7 +554,7 @@
 
 .skill-pills .skill-icon:hover .skill-name {
   opacity: 1;
-  transform: translateY(6px);
+  transform: translateY(5px);
 }
 
 .contact-card {

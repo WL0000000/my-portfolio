@@ -1,7 +1,7 @@
 import './App.css'
 import { Link } from 'react-router-dom'
 import { useInView } from './useInView'
-import { FaGithub, FaLinkedin, FaInstagram, FaYoutube, FaDiscord, FaBullseye, FaGamepad, FaMapMarkerAlt, FaPython, FaJava, FaHtml5, FaCss3Alt, FaReact } from 'react-icons/fa'
+import { FaGithub, FaLinkedin, FaInstagram, FaYoutube, FaDiscord, FaBullseye, FaGamepad, FaMapMarkerAlt, FaPython, FaJava, FaHtml5, FaCss3Alt, FaReact, FaFileAlt, FaEnvelope } from 'react-icons/fa'
 import { FaNodeJs } from 'react-icons/fa6'
 import { IoLogoJavascript } from 'react-icons/io5'
 import { SiCplusplus, SiLua, SiC, SiClerk, SiFastapi, SiTypescript } from 'react-icons/si'
@@ -39,8 +39,8 @@ function App() {
               Software Systems @ SFU
             </p>
             <div className="hero-actions">
-              <a className="btn primary" href="https://drive.google.com/file/d/temp/view" target="_blank" rel="noopener noreferrer">Resume</a>
-              <a className="btn ghost" href="#contact">Get in touch</a>
+              <a className="btn primary" href="https://drive.google.com/file/d/temp/view" target="_blank" rel="noopener noreferrer">Resume <FaFileAlt /></a>
+              <a className="btn ghost" href="#contact">Get in touch <FaEnvelope /></a>
             </div>
           </div>
           <div className="hero-card">
