@@ -1,7 +1,11 @@
 import './App.css'
 import { Link } from 'react-router-dom'
 import { useInView } from './useInView'
-import { FaGithub, FaLinkedin, FaInstagram, FaYoutube, FaDiscord, FaBullseye, FaGamepad, FaMapMarkerAlt } from 'react-icons/fa'
+import { FaGithub, FaLinkedin, FaInstagram, FaYoutube, FaDiscord, FaBullseye, FaGamepad, FaMapMarkerAlt, FaPython, FaJava, FaHtml5, FaCss3Alt, FaReact } from 'react-icons/fa'
+import { FaNodeJs } from 'react-icons/fa6'
+import { IoLogoJavascript } from 'react-icons/io5'
+import { SiCplusplus, SiLua, SiC, SiClerk, SiFastapi, SiTypescript } from 'react-icons/si'
+import { TbSql, TbApi } from 'react-icons/tb'
 
 function App() {
   const [aboutRef, aboutInView] = useInView()
@@ -87,25 +91,85 @@ function App() {
           </div>
           <div className="skills-boxes">
             <div className="skill-box">
-              <h3>Programming/Backend</h3>
+              <h3>Backend & Programming</h3>
               <div className="skill-pills">
-                <span>Python</span>
-                <span>Java</span>
-                <span>C++</span>
-                <span>C</span>
-                <span>C#</span>
-                <span>Lua</span>
+                <span className="skill-icon">
+                  <FaPython />
+                  <span className="skill-name">Python</span>
+                </span>
+                <span className="skill-icon">
+                  <FaJava />
+                  <span className="skill-name">Java</span>
+                </span>
+                <span className="skill-icon">
+                  <SiCplusplus />
+                  <span className="skill-name">C++</span>
+                </span>
+                <span className="skill-icon">
+                  <SiC />
+                  <span className="skill-name">C</span>
+                </span>
+                <span className="skill-icon">
+                  <FaNodeJs />
+                  <span className="skill-name">Node.js</span>
+                </span>
+                <span className="skill-icon">
+                  <SiLua />
+                  <span className="skill-name">Lua</span>
+                </span>
+                <span className="skill-icon">
+                  <TbSql />
+                  <span className="skill-name">DB Design(SQL)</span>
+                </span>
+                <span className="skill-icon">
+                  <SiClerk />
+                  <span className="skill-name">Clerk</span>
+                </span>
+                <span className="skill-icon">
+                  <SiFastapi />
+                  <span className="skill-name">FastAPI</span>
+                </span>
+                <span className="skill-icon">
+                  <TbApi />
+                  <span className="skill-name">RestAPI</span>
+                </span>
               </div>
             </div>
             <div className="skill-box">
-              <h3>Web/Frontend</h3>
+              <h3>Frontend & Web</h3>
               <div className="skill-pills">
-                <span>HTML</span>
-                <span>CSS</span>
-                <span>JavaScript</span>
-                <span>React</span>
-                <span>TypeScript</span>
-                <span>Node.js</span>
+                <span className="skill-icon">
+                  <FaHtml5 />
+                  <span className="skill-name">HTML</span>
+                </span>
+                <span className="skill-icon">
+                  <FaCss3Alt />
+                  <span className="skill-name">CSS</span>
+                </span>
+                <span className="skill-icon">
+                  <IoLogoJavascript />
+                  <span className="skill-name">JavaScript</span>
+                </span>
+                <span className="skill-icon">
+                  <FaReact />
+                  <span className="skill-name">React</span>
+                </span>
+                <span className="skill-icon">
+                  <SiTypescript />
+                  <span className="skill-name">TypeScript</span>
+                </span>
+              </div>
+            </div>
+            <div className="skill-box">
+              <h3>Databases</h3>
+              <div className="skill-pills">
+                <span>Placeholder</span>
+              </div>
+            </div>
+            <div className="skill-box">
+              <h3>Developer Tools & Workflow</h3>
+              <div className="skill-pills">
+                <span>Placeholder</span>
               </div>
             </div>
           </div>
