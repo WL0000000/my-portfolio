@@ -49,7 +49,7 @@
   font-size: 1.6rem;
   letter-spacing: 0.02em;
   font-weight: 700;
-  background: linear-gradient(135deg, #d15235 0%, #e67e22 50%, #f39c12 100%);
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #a855f7 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -135,7 +135,7 @@
 
 .btn.primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(209, 82, 53, 0.25);
+  box-shadow: 0 8px 20px rgba(99, 102, 241, 0.25);
 }
 
 .btn.ghost {
@@ -181,7 +181,7 @@
   font-weight: 600;
   font-size: 0.95rem;
   padding: 10px 12px;
-  background: rgba(209, 82, 53, 0.05);
+  background: rgba(99, 102, 241, 0.05);
   border: 1px solid var(--border);
   border-radius: 8px;
   transition: all 0.2s ease;
@@ -204,7 +204,7 @@
 .social-links a:hover {
   border-color: var(--accent);
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(209, 82, 53, 0.1), inset 0 0 15px rgba(209, 82, 53, 0.12);
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.1), inset 0 0 15px rgba(99, 102, 241, 0.12);
 }
 
 .social-links a svg {
@@ -214,7 +214,7 @@
 }
 
 .social-links a:hover {
-  background: rgba(209, 82, 53, 0.15);
+  background: rgba(99, 102, 241, 0.15);
   transform: translateX(6px);
 }
 
@@ -236,7 +236,7 @@
   font-family: var(--font-display);
   font-size: 2rem;
   margin-bottom: 6px;
-  background: linear-gradient(135deg, #d15235 0%, #e67e22 50%, #f39c12 100%);
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #a855f7 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -271,7 +271,7 @@
   padding: 16px;
   border: 1px solid var(--border);
   border-radius: 16px;
-  background: rgba(209, 82, 53, 0.08);
+  background: rgba(99, 102, 241, 0.08);
   position: relative;
   overflow: hidden;
   transition: all 0.3s ease;
@@ -282,7 +282,7 @@
 .stats li:hover {
   border-color: var(--accent);
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(209, 82, 53, 0.1), inset 0 0 20px rgba(209, 82, 53, 0.15);
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.1), inset 0 0 20px rgba(99, 102, 241, 0.15);
 }
 
 .stats span {
@@ -328,7 +328,7 @@
   right: -2px;
   bottom: -2px;
   border-radius: 18px;
-  background: linear-gradient(135deg, #d15235 0%, #e67e22 50%, #f39c12 100%);
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #a855f7 100%);
   z-index: -1;
 }
 
@@ -345,7 +345,7 @@
   border-radius: 16px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   overflow: hidden;
-  box-shadow: 0 0 0 2px #d15235;
+  box-shadow: 0 0 0 2px #6366f1;
 }
 
 .project-card-featured::before {
@@ -378,13 +378,13 @@
 
 .project-card-featured:hover {
   transform: scale(1.05);
-  box-shadow: 0 12px 24px rgba(209, 82, 53, 0.3);
+  box-shadow: 0 12px 24px rgba(99, 102, 241, 0.3);
 }
 
 .project-badge {
   display: inline-block;
   padding: 6px 12px;
-  background: rgba(209, 82, 53, 0.9);
+  background: rgba(99, 102, 241, 0.9);
   border-radius: 8px;
   font-size: 0.85rem;
   font-weight: 600;
@@ -411,11 +411,11 @@
 }
 
 .skill-box:first-child {
-  background: linear-gradient(135deg, #2d2420 0%, #322518 100%);
+  background: linear-gradient(135deg, #1e1e2e 0%, #252538 100%);
 }
 
 .skill-box:nth-child(2) {
-  background: linear-gradient(135deg, #2a2520 0%, #2d2420 100%);
+  background: linear-gradient(135deg, #1a1a28 0%, #1e1e2e 100%);
 }
 
 .skill-box h3 {
@@ -434,7 +434,7 @@
   padding: 8px 16px;
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(209, 82, 53, 0.3);
+  border: 1px solid rgba(99, 102, 241, 0.3);
   font-size: 0.9rem;
   color: var(--text-primary);
   transition: all 0.2s ease;
@@ -476,7 +476,7 @@
   font-family: var(--font-display);
   font-size: 3rem;
   margin-bottom: 16px;
-  background: linear-gradient(135deg, #d15235 0%, #e67e22 50%, #f39c12 100%);
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #a855f7 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -512,7 +512,7 @@
 .experience-item:hover {
   border-color: var(--accent);
   transform: translateY(-4px);
-  box-shadow: 0 12px 24px rgba(209, 82, 53, 0.1);
+  box-shadow: 0 12px 24px rgba(99, 102, 241, 0.1);
 }
 
 .experience-item-content {
@@ -528,7 +528,7 @@
   flex-shrink: 0;
   padding: 8px;
   border-radius: 12px;
-  background: rgba(209, 82, 53, 0.05);
+  background: rgba(99, 102, 241, 0.05);
 }
 
 .experience-text {
@@ -588,7 +588,7 @@
 .footer-name {
   font-weight: 700;
   font-size: 1.5rem;
-  background: linear-gradient(135deg, #d15235 0%, #e67e22 50%, #f39c12 100%);
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #a855f7 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
