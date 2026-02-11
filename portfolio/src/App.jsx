@@ -1,11 +1,11 @@
 import './App.css'
 import { Link } from 'react-router-dom'
 import { useInView } from './useInView'
-import { FaGithub, FaLinkedin, FaInstagram, FaYoutube, FaDiscord, FaBullseye, FaGamepad, FaMapMarkerAlt, FaPython, FaJava, FaHtml5, FaCss3Alt, FaReact, FaFileAlt, FaEnvelope } from 'react-icons/fa'
+import { FaGithub, FaLinkedin, FaInstagram, FaYoutube, FaDiscord, FaBullseye, FaGamepad, FaMapMarkerAlt, FaPython, FaJava, FaHtml5, FaCss3Alt, FaReact, FaFileAlt, FaEnvelope, FaDocker, FaGitAlt, FaUbuntu, FaLinux } from 'react-icons/fa'
 import { FaNodeJs } from 'react-icons/fa6'
 import { IoLogoJavascript } from 'react-icons/io5'
-import { SiCplusplus, SiLua, SiC, SiClerk, SiFastapi, SiTypescript } from 'react-icons/si'
-import { TbSql, TbApi } from 'react-icons/tb'
+import { SiCplusplus, SiLua, SiC, SiClerk, SiFastapi, SiTypescript, SiPostgresql, SiSqlite, SiMongodb } from 'react-icons/si'
+import { TbSql, TbApi, TbH2 } from 'react-icons/tb'
 
 function App() {
   const [aboutRef, aboutInView] = useInView()
@@ -163,13 +163,47 @@ function App() {
             <div className="skill-box">
               <h3>Databases</h3>
               <div className="skill-pills">
-                <span>Placeholder</span>
+                <span className="skill-icon">
+                  <SiPostgresql />
+                  <span className="skill-name">PostgreSQL</span>
+                </span>
+                <span className="skill-icon">
+                  <TbH2 />
+                  <span className="skill-name">H2</span>
+                </span>
+                <span className="skill-icon">
+                  <SiMongodb />
+                  <span className="skill-name">MongoDB</span>
+                </span>
+                <span className="skill-icon">
+                  <SiSqlite />
+                  <span className="skill-name">SQLite</span>
+                </span>
               </div>
             </div>
             <div className="skill-box">
               <h3>Developer Tools & Workflow</h3>
               <div className="skill-pills">
-                <span>Placeholder</span>
+                <span className="skill-icon">
+                  <FaDocker />
+                  <span className="skill-name">Docker</span>
+                </span>
+                <span className="skill-icon">
+                  <FaGitAlt />
+                  <span className="skill-name">Git</span>
+                </span>
+                <span className="skill-icon">
+                  <FaUbuntu />
+                  <span className="skill-name">Ubuntu</span>
+                </span>
+                <span className="skill-icon">
+                  <FaLinux />
+                  <span className="skill-name">Linux</span>
+                </span>
+                <span className="skill-icon">
+                  <FaGithub />
+                  <span className="skill-name">GitHub</span>
+                </span>
               </div>
             </div>
           </div>
@@ -234,17 +268,13 @@ function App() {
         <section className={`section contact ${contactInView ? 'fade-in' : ''}`} ref={contactRef} id="contact">
           <div className="section-title">
             <h2>Contact</h2>
-            <p>Let us build something useful.</p>
+            <p>Send a message to collaborate or ask a question.</p>
           </div>
           <div className="contact-card">
-            <p>Send a message to collaborate or ask a question.</p>
+            <p></p>
             <a 
               className="btn primary" 
               href="mailto:wla230@sfu.ca"
-              onClick={(e) => {
-                e.preventDefault();
-                window.location.href = 'mailto:wla230@sfu.ca';
-              }}
             >
               wla230@sfu.ca
             </a>
