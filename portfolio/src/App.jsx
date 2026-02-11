@@ -39,7 +39,7 @@ function App() {
               Software Systems @ SFU
             </p>
             <div className="hero-actions">
-              <a className="btn primary" href="https://drive.google.com/file/d/temp/view" target="_blank" rel="noopener noreferrer">Resume <FaFileAlt /></a>
+              <Link className="btn primary" to="/resume">Resume <FaFileAlt /></Link>
               <a className="btn ghost" href="#contact">Get in touch <FaEnvelope /></a>
             </div>
           </div>
