@@ -66,7 +66,7 @@ function App() {
             <p >
               Hi! I'm William Li, a Software Systems student at SFU and aspiring Software Developer.<br/><br/>
               I enjoy building everything from games to secure systems. Currently, my passion lies within game development, where I focus on creating fun and engaging experiences for users on Roblox.<br/><br/>
-              I have a background in full-stack development, and I am always eager to learn new technologies and improve my skills!
+              I have a background in full-stack development, including React, Node.js, Docker, and AWS, and I am always eager to learn new technologies and improve my skills!
             </p>
             <ul className="stats">
               <li>
@@ -266,11 +266,13 @@ function App() {
                 <p>Point and click puzzle game</p>
               </div>
             </a>
-            <article className="project-card">
-              <h3>Project Two</h3>
-              <p>Highlight the tools used and a key outcome.</p>
-              <a href="#">View details</a>
-            </article>
+            <a href="https://github.com/WL0000000/python-automaton" target="_blank" rel="noopener noreferrer" className="project-card project-card-featured" style={{ '--project-image': "url('/Python-Basics-Chapter-on-Web-Scraping_Watermarked.f8d56f56c22c.jpg')" }}>
+              <div className="project-content">
+                <div className="project-badge">🚧 Work in Progress</div>
+                <h3>Automaton</h3>
+                <p>Python-powered website scraping and browser automation.</p>
+              </div>
+            </a>
           </div>
         </section>
 
