@@ -1,6 +1,7 @@
 import './App.css'
 import { Link } from 'react-router-dom'
 import { useInView } from './useInView'
+import resumePdf from './assets/William_Li_Resume.pdf'
 import { FaGithub, FaLinkedin, FaInstagram, FaYoutube, FaDiscord, FaBullseye, FaGamepad, FaMapMarkerAlt, FaPython, FaJava, FaHtml5, FaCss3Alt, FaReact, FaFileAlt, FaEnvelope, FaDocker, FaGitAlt, FaUbuntu, FaLinux } from 'react-icons/fa'
 import { FaNodeJs } from 'react-icons/fa6'
 import { IoLogoJavascript } from 'react-icons/io5'
@@ -39,7 +40,7 @@ function App() {
               Software Systems @ SFU
             </p>
             <div className="hero-actions">
-              <Link className="btn primary" to="/resume">Resume <FaFileAlt /></Link>
+              <a className="btn primary" href={resumePdf} target="_blank" rel="noopener noreferrer">Resume <FaFileAlt /></a>
               <a className="btn ghost" href="#contact">Get in touch <FaEnvelope /></a>
             </div>
           </div>
@@ -322,7 +323,7 @@ function App() {
             <div className="footer-nav">
               <p className="footer-nav-heading">Pages</p>
               <a href="/">Home</a>
-              <a href="https://drive.google.com/file/d/temp/view" target="_blank" rel="noopener noreferrer">Resume</a>
+              <a href={resumePdf} target="_blank" rel="noopener noreferrer">Resume</a>
               <Link to="/blog">Blog</Link>
             </div>
           </div>
