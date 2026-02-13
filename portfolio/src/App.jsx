@@ -7,6 +7,7 @@ import { FaNodeJs } from 'react-icons/fa6'
 import { IoLogoJavascript } from 'react-icons/io5'
 import { SiCplusplus, SiLua, SiC, SiClerk, SiFastapi, SiTypescript, SiPostgresql, SiSqlite, SiMongodb, SiRobloxstudio, SiVite } from 'react-icons/si'
 import { TbSql, TbApi, TbH2 } from 'react-icons/tb'
+import { Analytics } from "@vercel/analytics/react"
 
 function App() {
   const [aboutRef, aboutInView] = useInView()
@@ -339,6 +340,7 @@ function App() {
           </div>
         </div>
       </footer>
+      <Analytics />
     </div>
   )
 }
