@@ -89,9 +89,7 @@
 .nav a {
   color: var(--text-muted);
   transition: color 0.2s ease;
-}
 
-.nav a:hover {
   color: var(--text-primary);
 }
 
@@ -612,7 +610,7 @@
 
 .contact-card {
   padding: 24px;
-  border-radius: 8px;
+  border-radius: 6px;
   border: 1px solid var(--border);
   background: var(--surface);
   display: flex;
@@ -665,6 +663,24 @@
   gap: 24px;
 }
 
+@media (max-width: 700px) {
+  .experience-item-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  .experience-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+  .experience-icon {
+    width: 56px;
+    height: 56px;
+    margin-bottom: 8px;
+  }
+}
+
 .experience-item {
   padding: 24px;
   border-radius: 8px;
@@ -697,6 +713,7 @@
 
 .experience-text {
   flex: 1;
+  /* left-aligned by default */
 }
 
 .experience-header {
@@ -857,8 +874,9 @@
 }
 
 .footer-logo {
-  height: 26px;
-  width: auto;
+  display: flex;
+  gap: 12px;
+  align-items: center;
   object-fit: contain;
   opacity: 0.8;
   transition: opacity 0.2s ease;
@@ -991,6 +1009,14 @@
 
   .footer-logo {
     height: 24px;
+    max-width: 120px;
+    display: inline-block;
+  }
+
+  .footer-logos img {
+    height: 24px;
+    max-width: 120px;
+    display: inline-block;
   }
 
   .skills-boxes {
@@ -1007,6 +1033,48 @@
   .experience-icon {
     width: 60px;
     height: 60px;
+  }
+}
+
+
+@media (max-width: 700px) {
+  .site-footer {
+    
+    padding-left: 16px;
+    padding-right: 16px;
+    box-sizing: border-box;
+  }
+  .footer-left {
+    align-items: center;
+  }
+  .footer-right {
+    align-items: center;
+    justify-content: center;
+  }
+  .footer-nav-section {
+    width: 100%;
+    transform: none !important;
+    gap: 12px;
+  }
+  .footer-nav a {
+    display: inline-block;
+    max-width: 100%;
+    word-break: break-word;
+    white-space: normal;
+  }
+  .footer-logos img {
+    max-width: 140px;
+    height: auto;
+  }
+
+  .experience-header {
+    justify-content: flex-start;
+  }
+  .experience-date {
+    white-space: normal;
+  }
+  .experience-text {
+    width: 100%;
   }
 }
 
@@ -1034,5 +1102,30 @@
 
   .eyebrow {
     font-size: 0.7rem;
+  }
+}
+
+/* Mobile logo size */
+@media (max-width: 640px) {
+  .site-footer .footer-logos img,
+  .site-footer .footer-logo img {
+    max-width: 40px;
+    width: auto;
+    height: auto;
+    display: inline-block;
+  }
+}
+
+/* Desktop logo size override */
+@media (min-width: 641px) {
+  .site-footer .footer-logos img,
+  .site-footer .footer-logo img {
+    max-width: 120px !important;
+    height: 24px !important;
+    width: auto !important;
+    display: inline-block !important;
+    object-fit: contain !important;
+    opacity: 0.8;
+    transition: opacity 0.2s ease;
   }
 }

@@ -1,0 +1,75 @@
+/* Mobile fixes: footer and experience alignment */
+@media (max-width: 700px) {
+  .site-footer {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    text-align: center;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .footer-left {
+    align-items: center;
+  }
+  .footer-right {
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+  }
+  .footer-nav-section {
+    flex-direction: column;
+    gap: 16px;
+    transform: none !important;
+    align-items: center;
+    width: 100%;
+  }
+  .footer-nav {
+    align-items: center;
+  }
+  .footer-nav a {
+    display: inline-block;
+    max-width: 100%;
+    word-break: break-word;
+    white-space: normal;
+  }
+  .footer-logos {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .footer-logos img {
+    max-width: 140px;
+    width: auto;
+    height: auto;
+  }
+}
+
+@media (max-width: 700px) {
+  .experience-item-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  .experience-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    justify-content: flex-start;
+  }
+  .experience-date {
+    white-space: normal;
+    text-align: left;
+  }
+  .experience-icon {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 6px;
+  }
+  .experience-item {
+    padding: 16px;
+  }
+  .experience-text {
+    width: 100%;
+  }
+}
