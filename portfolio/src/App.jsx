@@ -234,7 +234,7 @@ function App() {
                     <span className="experience-date">Jul 2025 - Present</span>
                   </div>
                   <p className="experience-company">Independent Developer</p>
-                  <p className="experience-description">🖥️ Full-stack game development</p>
+                  <p className="experience-description">Full-stack game development in Lua using Roblox Studio.</p>
                 </div>
               </div>
             </div>
@@ -247,7 +247,7 @@ function App() {
                     <span className="experience-date">Sept 2024 - Present</span>
                   </div>
                   <p className="experience-company">Simon Fraser University</p>
-                  <p className="experience-description">🎓 Currently studying Software Systems at Simon Fraser University</p>
+                  <p className="experience-description">Studying Software Systems, focusing on systems programming, full-stack development, and software design.</p>
                 </div>
               </div>
             </div>
@@ -283,7 +283,6 @@ function App() {
             <p>Send a message to collaborate or ask a question.</p>
           </div>
           <div className="contact-card">
-            <p></p>
             <a 
               className="btn primary" 
               href="mailto:wla230@sfu.ca"

@@ -74,7 +74,7 @@
   font-size: 1.6rem;
   letter-spacing: 0.02em;
   font-weight: 700;
-  background: linear-gradient(135deg, #4f52c9 0%, #6366f1 50%, #818cf8 100%);
+  background: linear-gradient(135deg, #4f46e5, #7c3aed);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -87,10 +87,12 @@
 }
 
 .nav a {
-  color: var(--text-muted);
-  transition: color 0.2s ease;
-
   color: var(--text-primary);
+  transition: color 0.2s ease;
+}
+
+.nav a:hover {
+  color: var(--accent);
 }
 
 .hero {
@@ -159,7 +161,7 @@
 
 .btn.primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(99, 102, 241, 0.25);
+  box-shadow: 0 8px 20px rgba(79, 70, 229, 0.25);
 }
 
 .btn.ghost {
@@ -205,7 +207,7 @@
   font-weight: 600;
   font-size: 0.95rem;
   padding: 10px 12px;
-  background: rgba(99, 102, 241, 0.05);
+  background: rgba(79, 70, 229, 0.05);
   border: 1px solid var(--border);
   border-radius: 6px;
   transition: all 0.2s ease;
@@ -225,12 +227,6 @@
   z-index: 2;
 }
 
-.social-links a:hover {
-  border-color: var(--accent);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.1), inset 0 0 15px rgba(99, 102, 241, 0.12);
-}
-
 .social-links a svg {
   width: 18px;
   height: 18px;
@@ -238,8 +234,10 @@
 }
 
 .social-links a:hover {
-  background: rgba(99, 102, 241, 0.15);
-  transform: translateX(6px);
+  border-color: var(--accent);
+  background: rgba(79, 70, 229, 0.12);
+  transform: translateX(4px);
+  box-shadow: 0 2px 8px rgba(79, 70, 229, 0.1);
 }
 
 .section {
@@ -260,7 +258,7 @@
   font-family: var(--font-display);
   font-size: 2rem;
   margin-bottom: 6px;
-  background: linear-gradient(135deg, #4f52c9 0%, #6366f1 50%, #818cf8 100%);
+  background: linear-gradient(135deg, #4f46e5, #7c3aed);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -269,11 +267,11 @@
 .section-title h2::after {
   content: '';
   display: block;
-  width: 50px;
-  height: 3px;
-  margin: 1px auto 0;
+  width: 40px;
+  height: 2px;
+  margin: 8px auto 0;
   border-radius: 2px;
-  background: linear-gradient(135deg, #4f52c9, #818cf8);
+  background: var(--accent);
 }
 
 #about .section-title h2::after {
@@ -309,7 +307,7 @@
   padding: 16px;
   border: 1px solid var(--border);
   border-radius: 8px;
-  background: rgba(99, 102, 241, 0.08);
+  background: rgba(79, 70, 229, 0.08);
   position: relative;
   overflow: hidden;
   transition: all 0.3s ease;
@@ -320,7 +318,7 @@
 .stats li:hover {
   border-color: var(--accent);
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.1), inset 0 0 20px rgba(99, 102, 241, 0.15);
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.1), inset 0 0 20px rgba(79, 70, 229, 0.15);
 }
 
 .stats span {
@@ -366,7 +364,7 @@
   right: -1px;
   bottom: -1px;
   border-radius: 8px;
-  background: linear-gradient(135deg, #4f52c9 0%, #6366f1 50%, #818cf8 100%);
+  background: linear-gradient(135deg, #4f46e5, #7c3aed);
   z-index: -1;
 }
 
@@ -381,7 +379,7 @@
   border-radius: 8px;
   transition: box-shadow 0.3s ease;
   overflow: hidden;
-  box-shadow: 0 0 0 1px #6366f1;
+  box-shadow: 0 0 0 1px #4f46e5;
 }
 
 .project-card-featured::after {
@@ -429,7 +427,7 @@
 }
 
 .project-card-featured:hover {
-  box-shadow: 0 0 0 1px #6366f1, 0 12px 24px rgba(99, 102, 241, 0.3);
+  box-shadow: 0 0 0 1px #4f46e5, 0 12px 24px rgba(79, 70, 229, 0.3);
 }
 
 .project-card-featured:hover::after {
@@ -439,7 +437,7 @@
 .project-badge {
   display: inline-block;
   padding: 6px 12px;
-  background: rgba(99, 102, 241, 0.9);
+  background: rgba(79, 70, 229, 0.9);
   border-radius: 6px;
   font-size: 0.85rem;
   font-weight: 600;
@@ -470,7 +468,7 @@
 }
 
 .skill-box:hover {
-  box-shadow: 0 0 0 0.5px #6366f1, 0 12px 24px rgba(99, 102, 241, 0.3);
+  box-shadow: 0 0 0 0.5px #4f46e5, 0 12px 24px rgba(79, 70, 229, 0.3);
   
 }
 
@@ -479,7 +477,7 @@
   position: absolute;
   inset: -1px;
   border-radius: 10px;
-  background: linear-gradient(135deg, #4f52c9 0%, #6366f1 50%, #818cf8 100%);
+  background: linear-gradient(135deg, #4f46e5, #7c3aed);
   opacity: 0;
   transition: opacity 0.25s ease;
   z-index: -1;
@@ -494,20 +492,8 @@
   opacity: 1;
 }
 
-.skill-box:first-child {
-  background: linear-gradient(135deg, #1a1a22 0%, #20202a 100%);
-}
-
-.skill-box:nth-child(2) {
-  background: linear-gradient(135deg, #171720 0%, #1a1a22 100%);
-}
-
-.skill-box:nth-child(3) {
-  background: linear-gradient(135deg, #1a1a22 0%, #20202a 100%);
-}
-
-.skill-box:nth-child(4) {
-  background: linear-gradient(135deg, #171720 0%, #1a1a22 100%);
+.skill-box {
+  background: var(--surface);
 }
 
 .skill-box h3 {
@@ -528,7 +514,7 @@
   padding: 8px 16px;
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(99, 102, 241, 0.3);
+  border: 1px solid rgba(79, 70, 229, 0.3);
   font-size: 0.9rem;
   color: var(--text-primary);
   transition: all 0.2s ease;
@@ -544,68 +530,44 @@
 }
 
 .skill-pills .skill-icon {
-  padding: 8px 0 14px;
+  padding: 12px 8px;
   border-radius: 8px;
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(99, 102, 241, 0.3);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border);
   color: var(--text-primary);
-  transition: all 0.3s ease;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 8px;
   text-align: center;
-  min-width: 60px;
   width: 100%;
   max-width: 140px;
-  min-height: 80px;
-  cursor: pointer;
-  position: relative;
+  min-height: 88px;
   box-sizing: border-box;
-  will-change: transform;
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
 }
 
 .skill-pills .skill-icon svg {
-  font-size: 2.9rem;
+  font-size: 2rem;
   line-height: 1;
   display: block;
   margin: 0 auto;
-  transition: transform 0.3s ease;
-  will-change: transform;
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
 }
 
 .skill-pills .skill-icon .skill-name {
-  font-size: 0.9rem;
-  font-weight: 400;
-  line-height: 1.1;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  white-space: nowrap;
-  position: absolute;
-  bottom: -23px;
-  padding: 4px 0;
-  border: none;
-  background: none;
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  line-height: 1.2;
+  text-align: center;
+  white-space: normal;
+  word-break: break-word;
 }
 
 .skill-pills .skill-icon:hover {
-  background: rgba(255, 255, 255, 0.15);
   border-color: var(--accent);
-  transform: translateY(-4px);
-  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.15);
-}
-
-.skill-pills .skill-icon:hover svg {
-  transform: none;
-}
-
-.skill-pills .skill-icon:hover .skill-name {
-  opacity: 1;
+  box-shadow: 0 0 0 1px rgba(79, 70, 229, 0.25), 0 4px 12px rgba(79, 70, 229, 0.08);
 }
 
 .contact-card {
@@ -638,7 +600,7 @@
   font-family: var(--font-display);
   font-size: 3rem;
   margin-bottom: 16px;
-  background: linear-gradient(135deg, #4f52c9 0%, #6366f1 50%, #818cf8 100%);
+  background: linear-gradient(135deg, #4f46e5, #7c3aed);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -692,7 +654,7 @@
 .experience-item:hover {
   border-color: var(--accent);
   transform: translateY(-4px);
-  box-shadow: 0 12px 24px rgba(99, 102, 241, 0.1);
+  box-shadow: 0 12px 24px rgba(79, 70, 229, 0.1);
 }
 
 .experience-item-content {
@@ -708,7 +670,7 @@
   flex-shrink: 0;
   padding: 8px;
   border-radius: 6px;
-  background: rgba(99, 102, 241, 0.05);
+  background: rgba(79, 70, 229, 0.05);
 }
 
 .experience-text {
@@ -769,7 +731,7 @@
 .footer-name {
   font-weight: 700;
   font-size: 1.5rem;
-  background: linear-gradient(135deg, #4f52c9 0%, #6366f1 50%, #818cf8 100%);
+  background: linear-gradient(135deg, #4f46e5, #7c3aed);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -807,7 +769,7 @@
 }
 
 .footer-bottom {
-  padding-top: 58px;
+  padding-top: 40px;
 }
 
 .footer-right {
@@ -821,9 +783,8 @@
 .footer-nav-section {
   display: flex;
   flex-direction: row;
-  gap: 80px;
+  gap: 64px;
   align-items: flex-start;
-  transform: translateX(-40px);
 }
 
 .footer-nav {
