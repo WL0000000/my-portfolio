@@ -1,5 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
 
+/*
+  Tailwind v4 — import theme variables + utilities only.
+  Skipping "base" (Preflight) so Tailwind's CSS reset doesn't
+  fight our existing hand-written styles.
+*/
+@import "tailwindcss/theme" layer(theme);
+@import "tailwindcss/utilities" layer(utilities);
+
 :root {
   font-family: var(--font-body);
   line-height: 1.6;
@@ -57,4 +65,9 @@ h1, h2, h3, h4, h5, h6 {
 p {
   margin: 0;
   overflow-wrap: break-word;
+}
+
+@keyframes border-beam-travel {
+  from { offset-distance: 0%; }
+  to   { offset-distance: 100%; }
 }
