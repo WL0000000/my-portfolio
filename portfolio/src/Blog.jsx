@@ -1,18 +1,23 @@
 import './App.css'
 import { Link } from 'react-router-dom'
+import ThemeToggle from './ThemeToggle'
+import resumePdf from './assets/William_Li_Resume.pdf'
 
 function Blog() {
   return (
     <div className="page">
       <header className="site-header">
-        <div className="brand">William Li</div>
-        <nav className="nav">
-          <Link to="/">Home</Link>
-          
-          <a href="/#skills">Skills</a>
-          <a href="/#projects">Projects</a>
-          <a href="/#contact">Contact</a>
-        </nav>
+        <div className="header-left">
+          <div className="brand">William Li</div>
+          <nav className="nav">
+            <Link to="/">Home</Link>
+            <Link to="/blog">Blog</Link>
+            <a href={resumePdf} target="_blank" rel="noopener noreferrer">Resume</a>
+          </nav>
+        </div>
+        <div className="header-actions">
+          <ThemeToggle />
+        </div>
       </header>
 
       <main>

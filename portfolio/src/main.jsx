@@ -4,14 +4,17 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import './index.css'
 import App from './App.jsx'
 import Blog from './Blog.jsx'
+import { ThemeProvider } from './ThemeContext'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<App />} />
-        <Route path="/blog" element={<Blog />} />
-      </Routes>
-    </BrowserRouter>
+    <ThemeProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<App />} />
+          <Route path="/blog" element={<Blog />} />
+        </Routes>
+      </BrowserRouter>
+    </ThemeProvider>
   </StrictMode>,
 )

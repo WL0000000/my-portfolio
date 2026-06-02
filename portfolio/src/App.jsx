@@ -1,4 +1,5 @@
 import './App.css'
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useInView } from './useInView'
 import resumePdf from './assets/William_Li_Resume.pdf'
@@ -8,8 +9,12 @@ import { IoLogoJavascript } from 'react-icons/io5'
 import { SiCplusplus, SiLua, SiC, SiClerk, SiFastapi, SiTypescript, SiPostgresql, SiSqlite, SiMongodb, SiRobloxstudio, SiVite } from 'react-icons/si'
 import { TbSql, TbApi, TbH2 } from 'react-icons/tb'
 import { Analytics } from "@vercel/analytics/react"
+import CommandPalette from './CommandPalette'
+import ThemeToggle from './ThemeToggle'
+import { BorderBeam } from '@/components/ui/border-beam'
 
 function App() {
+  const [cmdOpen, setCmdOpen] = useState(false)
   const [aboutRef, aboutInView] = useInView()
   const [projectsRef, projectsInView] = useInView()
   const [skillsRef, skillsInView] = useInView()
@@ -19,14 +24,25 @@ function App() {
   return (
     <div className="page">
       <header className="site-header">
-        <div className="brand">William Li</div>
-        <nav className="nav">
-          <a href="#about">About</a>
-          <a href="#skills">Skills</a>
-          <a href="#experience">Experience</a>
-          <a href="#projects">Projects</a>
-          <a href="#contact">Contact</a>
-        </nav>
+        <div className="header-left">
+          <div className="brand">William Li</div>
+          <nav className="nav">
+            <Link to="/">Home</Link>
+            <Link to="/blog">Blog</Link>
+            <a href={resumePdf} target="_blank" rel="noopener noreferrer">Resume</a>
+          </nav>
+        </div>
+        <div className="header-actions">
+          <div className="cmd-trigger-wrapper">
+            <div className="cmd-glow-outer" aria-hidden="true" />
+            <div className="cmd-glow-inner" aria-hidden="true" />
+            <button className="cmd-trigger" onClick={() => setCmdOpen(true)} aria-label="Open command palette">
+              Search...
+              <kbd>⌘K</kbd>
+            </button>
+          </div>
+          <ThemeToggle />
+        </div>
       </header>
 
       <main>
@@ -64,6 +80,7 @@ function App() {
             <p>A short intro and what I care about.</p>
           </div>
           <div className="about-grid">
+            <BorderBeam duration={8} lightWidth={200} lightColor="#818cf8" borderWidth={1} />
             <p >
               Hi! I'm William Li, a Software Systems student at SFU and aspiring Software Developer.<br/><br/>
               I enjoy building everything from games to secure systems. Currently, my passion lies within game development, where I focus on creating fun and engaging experiences for users on Roblox.<br/><br/>
@@ -340,6 +357,7 @@ function App() {
         </div>
       </footer>
       <Analytics />
+      <CommandPalette open={cmdOpen} onOpenChange={setCmdOpen} />
     </div>
   )
 }

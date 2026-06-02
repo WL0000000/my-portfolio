@@ -1,0 +1,9 @@
+/* Static edge comes from the parent (.about-grid); beam layer is animation only */
+.border-beam-root {
+  border-style: solid;
+  border-color: transparent;
+}
+
+.border-beam-root::before {
+  border-color: transparent !important;
+}
