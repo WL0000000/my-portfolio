@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 import { FaEnvelope, FaPaperPlane } from 'react-icons/fa'
 
 const INITIAL_FORM = { name: '', email: '', message: '', website: '' }
@@ -14,6 +14,7 @@ function validate({ name, email, message, website }) {
 }
 
 export default function ContactForm() {
+  const startedAtRef = useRef(Date.now())
   const [form, setForm] = useState(INITIAL_FORM)
   const [status, setStatus] = useState('idle') // idle | sending | success | error
   const [error, setError] = useState('')
@@ -49,16 +50,21 @@ export default function ContactForm() {
           email: form.email.trim(),
           message: form.message.trim(),
           website: form.website,
+          startedAt: startedAtRef.current,
         }),
       })
 
       const data = await response.json().catch(() => ({}))
 
       if (!response.ok) {
+        if (response.status === 429) {
+          throw new Error(data.error || 'Too many messages sent recently. Please try again later.')
+        }
         throw new Error(data.error || 'Failed to send message. Please try again.')
       }
 
       setForm(INITIAL_FORM)
+      startedAtRef.current = Date.now()
       setStatus('success')
     } catch (err) {
       setStatus('error')

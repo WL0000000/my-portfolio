@@ -1,13 +1,67 @@
+import { getCache } from '@vercel/functions'
+
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+const MIN_FORM_TIME_MS = 3000
+const MAX_FORM_TIME_MS = 24 * 60 * 60 * 1000
+const RATE_LIMIT_MAX = 5
+const RATE_LIMIT_WINDOW_SEC = 3600
+
+function getClientIp(req) {
+  const forwarded = req.headers['x-forwarded-for']
+  if (typeof forwarded === 'string' && forwarded.length > 0) {
+    return forwarded.split(',')[0].trim()
+  }
+  if (Array.isArray(forwarded) && forwarded[0]) {
+    return forwarded[0].split(',')[0].trim()
+  }
+  return req.headers['x-real-ip'] || 'unknown'
+}
+
+async function checkRateLimit(ip) {
+  try {
+    const cache = getCache()
+    const key = `contact-rate:${ip}`
+    const record = await cache.get(key)
+
+    if (!record) {
+      await cache.set(key, { count: 1 }, { ttl: RATE_LIMIT_WINDOW_SEC })
+      return null
+    }
+
+    if (record.count >= RATE_LIMIT_MAX) {
+      return 'Too many messages sent recently. Please try again in about an hour.'
+    }
+
+    await cache.set(
+      key,
+      { count: record.count + 1 },
+      { ttl: RATE_LIMIT_WINDOW_SEC }
+    )
+    return null
+  } catch (err) {
+    console.error('Rate limit check failed:', err)
+    return null
+  }
+}
 
 function validateBody(body) {
   if (!body || typeof body !== 'object') {
     return 'Invalid request body.'
   }
 
-  const { name, email, message, website } = body
+  const { name, email, message, website, startedAt } = body
 
   if (website) return 'Invalid submission.'
+
+  if (typeof startedAt !== 'number') {
+    return 'Invalid submission.'
+  }
+
+  const elapsed = Date.now() - startedAt
+  if (elapsed < MIN_FORM_TIME_MS || elapsed > MAX_FORM_TIME_MS) {
+    return 'Invalid submission.'
+  }
+
   if (!name?.trim()) return 'Name is required.'
   if (name.trim().length > 100) return 'Name is too long.'
   if (!EMAIL_REGEX.test(email || '')) return 'Valid email is required.'
@@ -26,7 +80,14 @@ export default async function handler(req, res) {
 
   const validationError = validateBody(req.body)
   if (validationError) {
-    return res.status(400).json({ error: validationError })
+    const status = validationError.startsWith('Too many') ? 429 : 400
+    return res.status(status).json({ error: validationError })
+  }
+
+  const clientIp = getClientIp(req)
+  const rateLimitError = await checkRateLimit(clientIp)
+  if (rateLimitError) {
+    return res.status(429).json({ error: rateLimitError })
   }
 
   const apiKey = process.env.RESEND_API_KEY
