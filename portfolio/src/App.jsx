@@ -11,6 +11,7 @@ import { TbSql, TbApi, TbH2 } from 'react-icons/tb'
 import { Analytics } from "@vercel/analytics/react"
 import CommandPalette from './CommandPalette'
 import ThemeToggle from './ThemeToggle'
+import ContactForm from './components/ContactForm'
 import { BorderBeam } from '@/components/ui/border-beam'
 
 function App() {
@@ -299,14 +300,7 @@ function App() {
             <h2>Contact</h2>
             <p>Send a message to collaborate or ask a question.</p>
           </div>
-          <div className="contact-card">
-            <a 
-              className="btn primary" 
-              href="mailto:wla230@sfu.ca"
-            >
-              wla230@sfu.ca
-            </a>
-          </div>
+          <ContactForm />
         </section>
       </main>
 
