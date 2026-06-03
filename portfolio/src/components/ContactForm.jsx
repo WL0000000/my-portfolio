@@ -1,5 +1,6 @@
 import { useRef, useState } from 'react'
-import { FaEnvelope, FaPaperPlane } from 'react-icons/fa'
+import { FaEnvelope, FaLinkedin, FaGithub } from 'react-icons/fa'
+import { BorderBeam } from '@/components/ui/border-beam'
 
 const INITIAL_FORM = { name: '', email: '', message: '', website: '' }
 
@@ -16,7 +17,7 @@ function validate({ name, email, message, website }) {
 export default function ContactForm() {
   const startedAtRef = useRef(Date.now())
   const [form, setForm] = useState(INITIAL_FORM)
-  const [status, setStatus] = useState('idle') // idle | sending | success | error
+  const [status, setStatus] = useState('idle')
   const [error, setError] = useState('')
 
   const handleChange = (event) => {
@@ -73,89 +74,133 @@ export default function ContactForm() {
   }
 
   return (
-    <div className="contact-card">
-      <form className="contact-form" onSubmit={handleSubmit} noValidate>
-        <div className="contact-form-row">
-          <label className="contact-field">
-            <span>Name</span>
-            <input
-              type="text"
-              name="name"
-              value={form.name}
-              onChange={handleChange}
-              placeholder="Your name"
-              autoComplete="name"
-              required
-              disabled={status === 'sending'}
-            />
-          </label>
-          <label className="contact-field">
-            <span>Email</span>
-            <input
-              type="email"
-              name="email"
-              value={form.email}
-              onChange={handleChange}
-              placeholder="you@example.com"
-              autoComplete="email"
-              required
-              disabled={status === 'sending'}
-            />
-          </label>
-        </div>
+    <div className="contact-shell">
+      <BorderBeam duration={10} lightWidth={240} lightColor="#818cf8" borderWidth={1} />
 
-        <label className="contact-field">
-          <span>Message</span>
-          <textarea
-            name="message"
-            value={form.message}
-            onChange={handleChange}
-            placeholder="Tell me about your project, question, or collaboration idea..."
-            rows={5}
-            required
-            disabled={status === 'sending'}
-          />
-        </label>
-
-        {/* Honeypot — hidden from users, catches bots */}
-        <label className="contact-honeypot" aria-hidden="true">
-          <span>Website</span>
-          <input
-            type="text"
-            name="website"
-            value={form.website}
-            onChange={handleChange}
-            tabIndex={-1}
-            autoComplete="off"
-          />
-        </label>
-
-        <div className="contact-form-actions">
-          <button
-            type="submit"
-            className="btn primary contact-submit"
-            disabled={status === 'sending'}
+      <aside className="contact-aside">
+        <h3 className="contact-aside-title">Open to new opportunities</h3>
+        <p className="contact-aside-text">
+          For project inquiries, collaboration, or general questions, send a message
+          or reach out through any of the links below.
+        </p>
+        <div className="contact-direct-links">
+          <a className="contact-direct-link" href="mailto:wla230@sfu.ca">
+            <FaEnvelope aria-hidden="true" />
+            <span className="contact-direct-text">
+              <span className="contact-direct-label">Email</span>
+              <span className="contact-direct-value">wla230@sfu.ca</span>
+            </span>
+          </a>
+          <a
+            className="contact-direct-link"
+            href="https://www.linkedin.com/in/william-li-6283aa333/"
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            {status === 'sending' ? 'Sending...' : 'Send message'}
-            <FaPaperPlane />
-          </button>
-          <a className="contact-email-link" href="mailto:wla230@sfu.ca">
-            <FaEnvelope />
-            wla230@sfu.ca
+            <FaLinkedin aria-hidden="true" />
+            <span className="contact-direct-text">
+              <span className="contact-direct-label">LinkedIn</span>
+              <span className="contact-direct-value">william-li</span>
+            </span>
+          </a>
+          <a
+            className="contact-direct-link"
+            href="https://github.com/WL0000000"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaGithub aria-hidden="true" />
+            <span className="contact-direct-text">
+              <span className="contact-direct-label">GitHub</span>
+              <span className="contact-direct-value">WL0000000</span>
+            </span>
           </a>
         </div>
+      </aside>
 
+      <div className="contact-form-panel">
         {status === 'success' && (
-          <p className="contact-feedback contact-feedback--success" role="status">
-            Message sent! I&apos;ll get back to you soon.
-          </p>
+          <div className="contact-status contact-status--success" role="status">
+            <p className="contact-status-title">Message sent</p>
+            <p className="contact-status-text">
+              Thanks for reaching out. I&apos;ll reply to your email as soon as I can.
+            </p>
+          </div>
         )}
+
         {status === 'error' && error && (
-          <p className="contact-feedback contact-feedback--error" role="alert">
-            {error}
-          </p>
+          <div className="contact-status contact-status--error" role="alert">
+            <p className="contact-status-title">Couldn&apos;t send message</p>
+            <p className="contact-status-text">{error}</p>
+          </div>
         )}
-      </form>
+
+        <form className="contact-form" onSubmit={handleSubmit} noValidate>
+          <div className="contact-form-row">
+            <label className="contact-field">
+              <span className="contact-field-label">Name</span>
+              <input
+                type="text"
+                name="name"
+                value={form.name}
+                onChange={handleChange}
+                placeholder="Jane Doe"
+                autoComplete="name"
+                required
+                disabled={status === 'sending'}
+              />
+            </label>
+            <label className="contact-field">
+              <span className="contact-field-label">Email</span>
+              <input
+                type="email"
+                name="email"
+                value={form.email}
+                onChange={handleChange}
+                placeholder="jane@company.com"
+                autoComplete="email"
+                required
+                disabled={status === 'sending'}
+              />
+            </label>
+          </div>
+
+          <label className="contact-field">
+            <span className="contact-field-label">Message</span>
+            <textarea
+              name="message"
+              value={form.message}
+              onChange={handleChange}
+              placeholder="What would you like to discuss?"
+              rows={6}
+              required
+              disabled={status === 'sending'}
+            />
+          </label>
+
+          <label className="contact-honeypot" aria-hidden="true">
+            <span>Website</span>
+            <input
+              type="text"
+              name="website"
+              value={form.website}
+              onChange={handleChange}
+              tabIndex={-1}
+              autoComplete="off"
+            />
+          </label>
+
+          <div className="contact-form-footer">
+            <button
+              type="submit"
+              className="btn primary contact-submit"
+              disabled={status === 'sending'}
+            >
+              {status === 'sending' ? 'Sending…' : 'Send message'}
+            </button>
+          </div>
+        </form>
+      </div>
     </div>
   )
 }

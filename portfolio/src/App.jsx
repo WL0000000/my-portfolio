@@ -298,7 +298,7 @@ function App() {
         <section className={`section contact ${contactInView ? 'fade-in' : ''}`} ref={contactRef} id="contact">
           <div className="section-title">
             <h2>Contact</h2>
-            <p>Send a message to collaborate or ask a question.</p>
+            <p>Have a question or want to work together? Drop me a line.</p>
           </div>
           <ContactForm />
         </section>
