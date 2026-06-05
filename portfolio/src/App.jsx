@@ -13,6 +13,8 @@ import CommandPalette from './CommandPalette'
 import ThemeToggle from './ThemeToggle'
 import ContactForm from './components/ContactForm'
 import { BorderBeam } from '@/components/ui/border-beam'
+import { GridPattern } from '@/components/ui/grid-pattern'
+import { cn } from '@/lib/utils'
 
 function App() {
   const [cmdOpen, setCmdOpen] = useState(false)
@@ -47,8 +49,24 @@ function App() {
       </header>
 
       <main>
-        <section className="hero" id="top">
-          <div className="hero-content">
+        <section className="hero relative overflow-hidden" id="top">
+          <GridPattern
+            width={40}
+            height={40}
+            squares={[
+              [4, 3],
+              [7, 1],
+              [9, 4],
+              [12, 2],
+              [3, 6],
+            ]}
+            className={cn(
+              "fill-indigo-500/20 stroke-indigo-500/60",
+              "[mask-image:radial-gradient(900px_circle_at_top_right,white,transparent)]",
+              "inset-y-[-30%] h-[160%] skew-y-12",
+            )}
+          />
+          <div className="hero-content relative z-10">
             <p className="eyebrow">Portfolio 2026</p>
             <h1>
               William Li
@@ -62,7 +80,7 @@ function App() {
               <a className="btn ghost" href="#contact">Get in touch <FaEnvelope /></a>
             </div>
           </div>
-          <div className="hero-card">
+          <div className="hero-card relative z-10">
             <div className="card-label">Connect</div>
             <h2>Let's Connect</h2>
             <div className="social-links">
