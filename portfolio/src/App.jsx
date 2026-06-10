@@ -3,21 +3,20 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useInView } from './useInView'
 import resumePdf from './assets/William_Li_Resume.pdf'
-import { FaGithub, FaLinkedin, FaInstagram, FaYoutube, FaDiscord, FaBullseye, FaGamepad, FaMapMarkerAlt, FaPython, FaJava, FaHtml5, FaCss3Alt, FaReact, FaFileAlt, FaEnvelope, FaDocker, FaGitAlt, FaUbuntu, FaLinux } from 'react-icons/fa'
-import { FaNodeJs } from 'react-icons/fa6'
-import { IoLogoJavascript } from 'react-icons/io5'
-import { SiCplusplus, SiLua, SiC, SiClerk, SiFastapi, SiTypescript, SiPostgresql, SiSqlite, SiMongodb, SiRobloxstudio, SiVite } from 'react-icons/si'
-import { TbSql, TbApi, TbH2 } from 'react-icons/tb'
+import { FaGithub, FaLinkedin, FaInstagram, FaYoutube, FaDiscord, FaBullseye, FaGamepad, FaMapMarkerAlt, FaFileAlt, FaEnvelope } from 'react-icons/fa'
 import { Analytics } from "@vercel/analytics/react"
 import CommandPalette from './CommandPalette'
 import ThemeToggle from './ThemeToggle'
 import ContactForm from './components/ContactForm'
+import TypewriterText from './components/TypewriterText'
+import SkillsSection from './components/SkillsSection'
 import { BorderBeam } from '@/components/ui/border-beam'
 import { GridPattern } from '@/components/ui/grid-pattern'
 import { cn } from '@/lib/utils'
 
 function App() {
   const [cmdOpen, setCmdOpen] = useState(false)
+  const [heroStep, setHeroStep] = useState(0)
   const [aboutRef, aboutInView] = useInView()
   const [projectsRef, projectsInView] = useInView()
   const [skillsRef, skillsInView] = useInView()
@@ -62,20 +61,41 @@ function App() {
             ]}
             className={cn(
               "fill-indigo-500/20 stroke-indigo-500/60",
-              "[mask-image:radial-gradient(900px_circle_at_top_right,white,transparent)]",
+              "mask-[radial-gradient(900px_circle_at_top_right,white,transparent)]",
               "inset-y-[-30%] h-[160%] skew-y-12",
             )}
           />
           <div className="hero-content relative z-10">
-            <p className="eyebrow">Portfolio 2026</p>
+            <p className="eyebrow">
+              <TypewriterText
+                text="Portfolio 2026"
+                start={heroStep >= 0}
+                onComplete={() => setHeroStep(1)}
+              />
+            </p>
             <h1>
-              William Li
-              <span>Student Software Developer</span>
+              <TypewriterText
+                text="William Li"
+                className="hero-title-line"
+                start={heroStep >= 1}
+                onComplete={() => setHeroStep(2)}
+              />
+              <TypewriterText
+                as="span"
+                className="hero-subtitle"
+                text="Student Software Developer"
+                start={heroStep >= 2}
+                onComplete={() => setHeroStep(3)}
+              />
             </h1>
             <p className="lead">
-              Software Systems @ SFU
+              <TypewriterText
+                text="Software Systems @ SFU"
+                start={heroStep >= 3}
+                onComplete={() => setHeroStep(4)}
+              />
             </p>
-            <div className="hero-actions">
+            <div className={`hero-actions${heroStep >= 4 ? ' hero-actions--visible' : ''}`}>
               <a className="btn primary" href={resumePdf} target="_blank" rel="noopener noreferrer">Resume <FaFileAlt /></a>
               <a className="btn ghost" href="#contact">Get in touch <FaEnvelope /></a>
             </div>
@@ -127,132 +147,7 @@ function App() {
             <h2>Skills</h2>
             <p>Core tools I work with.</p>
           </div>
-          <div className="skills-boxes">
-            <div className="skill-box">
-              <h3>Backend & Programming</h3>
-              <div className="skill-pills">
-                <span className="skill-icon">
-                  <FaPython />
-                  <span className="skill-name">Python</span>
-                </span>
-                <span className="skill-icon">
-                  <FaJava />
-                  <span className="skill-name">Java</span>
-                </span>
-                <span className="skill-icon">
-                  <SiCplusplus />
-                  <span className="skill-name">C++</span>
-                </span>
-                <span className="skill-icon">
-                  <SiC />
-                  <span className="skill-name">C</span>
-                </span>
-                <span className="skill-icon">
-                  <FaNodeJs />
-                  <span className="skill-name">Node.js</span>
-                </span>
-                <span className="skill-icon">
-                  <SiLua />
-                  <span className="skill-name">Lua</span>
-                </span>
-                <span className="skill-icon">
-                  <TbSql />
-                  <span className="skill-name">DB Design(SQL)</span>
-                </span>
-                <span className="skill-icon">
-                  <SiClerk />
-                  <span className="skill-name">Clerk</span>
-                </span>
-                <span className="skill-icon">
-                  <SiFastapi />
-                  <span className="skill-name">FastAPI</span>
-                </span>
-                <span className="skill-icon">
-                  <TbApi />
-                  <span className="skill-name">RestAPI</span>
-                </span>
-              </div>
-            </div>
-            <div className="skill-box">
-              <h3>Frontend & Web</h3>
-              <div className="skill-pills">
-                <span className="skill-icon">
-                  <FaHtml5 />
-                  <span className="skill-name">HTML</span>
-                </span>
-                <span className="skill-icon">
-                  <FaCss3Alt />
-                  <span className="skill-name">CSS</span>
-                </span>
-                <span className="skill-icon">
-                  <IoLogoJavascript />
-                  <span className="skill-name">JavaScript</span>
-                </span>
-                <span className="skill-icon">
-                  <FaReact />
-                  <span className="skill-name">React</span>
-                </span>
-                <span className="skill-icon">
-                  <SiTypescript />
-                  <span className="skill-name">TypeScript</span>
-                </span>
-                <span className="skill-icon">
-                  <SiVite />
-                  <span className="skill-name">Vite</span>
-                </span>
-              </div>
-            </div>
-            <div className="skill-box">
-              <h3>Databases</h3>
-              <div className="skill-pills">
-                <span className="skill-icon">
-                  <SiPostgresql />
-                  <span className="skill-name">PostgreSQL</span>
-                </span>
-                <span className="skill-icon">
-                  <TbH2 />
-                  <span className="skill-name">H2</span>
-                </span>
-                <span className="skill-icon">
-                  <SiMongodb />
-                  <span className="skill-name">MongoDB</span>
-                </span>
-                <span className="skill-icon">
-                  <SiSqlite />
-                  <span className="skill-name">SQLite</span>
-                </span>
-              </div>
-            </div>
-            <div className="skill-box">
-              <h3>Developer Tools & Workflow</h3>
-              <div className="skill-pills">
-                <span className="skill-icon">
-                  <FaDocker />
-                  <span className="skill-name">Docker</span>
-                </span>
-                <span className="skill-icon">
-                  <FaGitAlt />
-                  <span className="skill-name">Git</span>
-                </span>
-                <span className="skill-icon">
-                  <FaUbuntu />
-                  <span className="skill-name">Ubuntu</span>
-                </span>
-                <span className="skill-icon">
-                  <FaLinux />
-                  <span className="skill-name">Linux</span>
-                </span>
-                <span className="skill-icon">
-                  <FaGithub />
-                  <span className="skill-name">GitHub</span>
-                </span>
-                <span className="skill-icon">
-                  <SiRobloxstudio />
-                  <span className="skill-name">Roblox Studio</span>
-                </span>
-              </div>
-            </div>
-          </div>
+          <SkillsSection />
         </section>
 
         <section className={`section ${experienceInView ? 'fade-in' : ''}`} ref={experienceRef} id="experience">

@@ -1,5 +1,5 @@
 import { MdLightMode, MdDarkMode } from 'react-icons/md'
-import { useTheme } from './ThemeContext'
+import { useTheme } from './useTheme'
 
 export default function ThemeToggle() {
   const { theme, toggleTheme } = useTheme()

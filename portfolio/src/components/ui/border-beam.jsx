@@ -1,5 +1,5 @@
 import { useRef, useEffect } from "react"
-import { motion } from "motion/react"
+import { motion as Motion } from "motion/react"
 import { cn } from "@/lib/utils"
 import "./border-beam.css"
 
@@ -40,15 +40,15 @@ export function BorderBeam({
       ref={pathRef}
       className={cn(
         "border-beam-root pointer-events-none absolute z-0 h-full w-full rounded-[inherit]",
-        "after:absolute after:inset-[var(--border-width)] after:rounded-[inherit] after:content-['']",
-        "border-[length:var(--border-width)] ![mask-clip:padding-box,border-box]",
-        "![mask-composite:intersect] [mask:linear-gradient(transparent,transparent),linear-gradient(red,red)]",
-        "before:absolute before:inset-0 before:z-[-1] before:rounded-[inherit] before:border-[length:var(--border-width)] before:border-solid",
+        "after:absolute after:inset-(--border-width) after:rounded-[inherit] after:content-['']",
+        "border-(length:--border-width) [mask-clip:padding-box,border-box]!",
+        "mask-intersect! [mask:linear-gradient(transparent,transparent),linear-gradient(red,red)]",
+        "before:absolute before:inset-0 before:z-[-1] before:rounded-[inherit] before:border-(length:--border-width) before:border-solid",
         className
       )}
       {...props}
     >
-      <motion.div
+      <Motion.div
         className="absolute inset-0 aspect-square bg-[radial-gradient(ellipse_at_center,var(--light-color),transparent,transparent)]"
         style={{
           "--light-color": lightColor,
