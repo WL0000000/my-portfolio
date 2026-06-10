@@ -66,36 +66,29 @@ function App() {
             )}
           />
           <div className="hero-content relative z-10">
-            <p className="eyebrow">
-              <TypewriterText
-                text="Portfolio 2026"
-                start={heroStep >= 0}
-                onComplete={() => setHeroStep(1)}
-              />
-            </p>
             <h1>
               <TypewriterText
                 text="William Li"
                 className="hero-title-line"
-                start={heroStep >= 1}
-                onComplete={() => setHeroStep(2)}
+                start={heroStep >= 0}
+                onComplete={() => setHeroStep(1)}
               />
               <TypewriterText
                 as="span"
                 className="hero-subtitle"
                 text="Student Software Developer"
-                start={heroStep >= 2}
-                onComplete={() => setHeroStep(3)}
+                start={heroStep >= 1}
+                onComplete={() => setHeroStep(2)}
               />
             </h1>
             <p className="lead">
               <TypewriterText
                 text="Software Systems @ SFU"
-                start={heroStep >= 3}
-                onComplete={() => setHeroStep(4)}
+                start={heroStep >= 2}
+                onComplete={() => setHeroStep(3)}
               />
             </p>
-            <div className={`hero-actions${heroStep >= 4 ? ' hero-actions--visible' : ''}`}>
+            <div className={`hero-actions${heroStep >= 3 ? ' hero-actions--visible' : ''}`}>
               <a className="btn primary" href={resumePdf} target="_blank" rel="noopener noreferrer">Resume <FaFileAlt /></a>
               <a className="btn ghost" href="#contact">Get in touch <FaEnvelope /></a>
             </div>
