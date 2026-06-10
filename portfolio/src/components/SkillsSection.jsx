@@ -25,8 +25,16 @@ import {
   SiMongodb,
   SiRobloxstudio,
   SiVite,
+  SiNextdotjs,
+  SiExpress,
+  SiAmazonwebservices,
+  SiGooglecloud,
+  SiSupabase,
+  SiRailway,
+  SiResend,
 } from 'react-icons/si'
 import { TbSql, TbApi, TbH2 } from 'react-icons/tb'
+import CursorIcon from './icons/CursorIcon'
 
 const SKILL_CATEGORIES = [
   {
@@ -43,6 +51,8 @@ const SKILL_CATEGORIES = [
       { icon: TbSql, name: 'DB Design (SQL)' },
       { icon: SiClerk, name: 'Clerk' },
       { icon: SiFastapi, name: 'FastAPI' },
+      { icon: SiExpress, name: 'Express.js' },
+      { icon: SiResend, name: 'Resend' },
       { icon: TbApi, name: 'RestAPI' },
     ],
   },
@@ -57,6 +67,7 @@ const SKILL_CATEGORIES = [
       { icon: FaReact, name: 'React' },
       { icon: SiTypescript, name: 'TypeScript' },
       { icon: SiVite, name: 'Vite' },
+      { icon: SiNextdotjs, name: 'Next.js' },
     ],
   },
   {
@@ -68,19 +79,24 @@ const SKILL_CATEGORIES = [
       { icon: TbH2, name: 'H2' },
       { icon: SiMongodb, name: 'MongoDB' },
       { icon: SiSqlite, name: 'SQLite' },
+      { icon: SiSupabase, name: 'Supabase' },
     ],
   },
   {
-    title: 'Developer Tools & Workflow',
+    title: 'DevOps & Cloud',
     direction: 'right',
     speed: 36,
     skills: [
       { icon: FaDocker, name: 'Docker' },
       { icon: FaGitAlt, name: 'Git' },
+      { icon: SiAmazonwebservices, name: 'AWS' },
+      { icon: SiGooglecloud, name: 'GCP' },
+      { icon: SiRailway, name: 'Railway' },
       { icon: FaUbuntu, name: 'Ubuntu' },
       { icon: FaLinux, name: 'Linux' },
       { icon: FaGithub, name: 'GitHub' },
       { icon: SiRobloxstudio, name: 'Roblox Studio' },
+      { icon: CursorIcon, name: 'Cursor' },
     ],
   },
 ]

@@ -829,6 +829,7 @@
 
 .skill-box--marquee {
   overflow: hidden;
+  min-height: 148px;
 }
 
 .skill-marquee-track {
@@ -932,6 +933,9 @@
 .skill-pills .skill-icon svg,
 .skill-icon--marquee svg {
   font-size: 2rem;
+  width: 2rem;
+  height: 2rem;
+  flex-shrink: 0;
   line-height: 1;
   display: block;
   margin: 0 auto;
