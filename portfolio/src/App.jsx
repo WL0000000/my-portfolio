@@ -144,6 +144,19 @@ function App() {
           <div className="experience-timeline">
             <div className="experience-item">
               <div className="experience-item-content">
+                <img src="/vici.png" alt="Vici Learning" className="experience-icon" />
+                <div className="experience-text">
+                  <div className="experience-header">
+                    <h3>Software Engineering Intern</h3>
+                    <span className="experience-date">Jun 2026 - Aug 2026</span>
+                  </div>
+                  <p className="experience-company">Vici Learning</p>
+                  <p className="experience-description">Built client-facing automation to streamline data pipelines across multiple SaaS platforms.</p>
+                </div>
+              </div>
+            </div>
+            <div className="experience-item">
+              <div className="experience-item-content">
                 <img src="/image.png" alt="Freelance Software Developer" className="experience-icon" />
                 <div className="experience-text">
                   <div className="experience-header">
