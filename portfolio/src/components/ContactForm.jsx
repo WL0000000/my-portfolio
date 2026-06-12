@@ -1,6 +1,5 @@
 import { useRef, useState } from 'react'
 import { FaEnvelope, FaLinkedin, FaGithub } from 'react-icons/fa'
-import { BorderBeam } from '@/components/ui/border-beam'
 
 const INITIAL_FORM = { name: '', email: '', message: '', website: '' }
 
@@ -75,8 +74,6 @@ export default function ContactForm() {
 
   return (
     <div className="contact-shell">
-      <BorderBeam duration={10} lightWidth={240} lightColor="#818cf8" borderWidth={1} />
-
       <aside className="contact-aside">
         <h3 className="contact-aside-title">Open to new opportunities</h3>
         <p className="contact-aside-text">

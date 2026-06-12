@@ -10,9 +10,10 @@ import ThemeToggle from './ThemeToggle'
 import ContactForm from './components/ContactForm'
 import TypewriterText from './components/TypewriterText'
 import SkillsSection from './components/SkillsSection'
-import { BorderBeam } from '@/components/ui/border-beam'
 import { GridPattern } from '@/components/ui/grid-pattern'
 import { cn } from '@/lib/utils'
+
+const isMac = typeof navigator !== 'undefined' && /Mac|iPhone|iPad/.test(navigator.platform)
 
 function App() {
   const [cmdOpen, setCmdOpen] = useState(false)
@@ -35,14 +36,10 @@ function App() {
           </nav>
         </div>
         <div className="header-actions">
-          <div className="cmd-trigger-wrapper">
-            <div className="cmd-glow-outer" aria-hidden="true" />
-            <div className="cmd-glow-inner" aria-hidden="true" />
-            <button className="cmd-trigger" onClick={() => setCmdOpen(true)} aria-label="Open command palette">
-              Search...
-              <kbd>⌘K</kbd>
-            </button>
-          </div>
+          <button className="cmd-trigger" onClick={() => setCmdOpen(true)} aria-label="Open command palette">
+            Search...
+            <kbd>{isMac ? '⌘K' : 'Ctrl K'}</kbd>
+          </button>
           <ThemeToggle />
         </div>
       </header>
@@ -109,11 +106,9 @@ function App() {
         <section className={`section ${aboutInView ? 'fade-in' : ''}`} ref={aboutRef} id="about">
           <div className="section-title">
             <h2>About</h2>
-            <p>A short intro and what I care about.</p>
           </div>
           <div className="about-grid">
-            <BorderBeam duration={8} lightWidth={200} lightColor="#818cf8" borderWidth={1} />
-            <p >
+            <p>
               Hi! I'm William Li, a Software Systems student at SFU and aspiring Software Developer.<br/><br/>
               I enjoy building everything from games to secure systems. Currently, my passion lies within game development, where I focus on creating fun and engaging experiences for users on Roblox.<br/><br/>
               I have a background in full-stack development, including React, Node.js, Docker, and AWS, and I am always eager to learn new technologies and improve my skills!
@@ -121,11 +116,11 @@ function App() {
             <ul className="stats">
               <li>
                 <span><FaBullseye /> Focus</span>
-                <strong>FullStack Development</strong>
+                <strong>Full-stack development</strong>
               </li>
               <li>
                 <span><FaGamepad /> Hobbies</span>
-                <strong>Competitive Gaming, Game Development, Music Production</strong>
+                <strong>Competitive gaming, game dev, music production</strong>
               </li>
               <li>
                 <span><FaMapMarkerAlt /> Location</span>
@@ -138,7 +133,6 @@ function App() {
         <section className={`section ${skillsInView ? 'fade-in' : ''}`} ref={skillsRef} id="skills">
           <div className="section-title">
             <h2>Skills</h2>
-            <p>Core tools I work with.</p>
           </div>
           <SkillsSection />
         </section>
@@ -146,12 +140,11 @@ function App() {
         <section className={`section ${experienceInView ? 'fade-in' : ''}`} ref={experienceRef} id="experience">
           <div className="section-title">
             <h2>Experience</h2>
-            <p>My professional journey and work experience.</p>
           </div>
           <div className="experience-timeline">
             <div className="experience-item">
               <div className="experience-item-content">
-                <img src="/0eeeb19633422b1241f4306419a0f15f39d58de9.png" alt="Roblox Game Developer" className="experience-icon" />
+                <img src="/roblox-logo.png" alt="Roblox logo" className="experience-icon" />
                 <div className="experience-text">
                   <div className="experience-header">
                     <h3>Roblox Game Developer</h3>
@@ -164,7 +157,7 @@ function App() {
             </div>
             <div className="experience-item">
               <div className="experience-item-content">
-                <img src="/Adobe Express - file.png" alt="Software Systems" className="experience-icon" />
+                <img src="/software-systems-logo.png" alt="SFU Software Systems logo" className="experience-icon" />
                 <div className="experience-text">
                   <div className="experience-header">
                     <h3>Software Systems</h3>
@@ -181,21 +174,20 @@ function App() {
         <section className={`section ${projectsInView ? 'fade-in' : ''}`} ref={projectsRef} id="projects">
           <div className="section-title">
             <h2>Projects</h2>
-            <p>Solo and collaborative projects I've worked on.</p>
           </div>
           <div className="cards">
-            <a href="https://devpost.com/software/escape-from-windows" target="_blank" rel="noopener noreferrer" className="project-card project-card-featured">
+            <a href="https://devpost.com/software/escape-from-windows" target="_blank" rel="noopener noreferrer" className="project-card project-card-featured" style={{ '--project-image': "url('/escape-from-windows.png')" }}>
               <div className="project-content">
                 <div className="project-badge">🏆 SystemHacks 2026 Winner</div>
                 <h3>Escape From Windows</h3>
-                <p>Point and click puzzle game</p>
+                <p>Point-and-click puzzle game</p>
               </div>
             </a>
-            <a href="https://github.com/WL0000000/python-automaton" target="_blank" rel="noopener noreferrer" className="project-card project-card-featured" style={{ '--project-image': "url('/Python-Basics-Chapter-on-Web-Scraping_Watermarked.f8d56f56c22c.jpg')" }}>
+            <a href="https://github.com/WL0000000/python-automaton" target="_blank" rel="noopener noreferrer" className="project-card project-card-featured" style={{ '--project-image': 'linear-gradient(135deg, #312e81 0%, #1e1b4b 55%, #0b0b16 100%)' }}>
               <div className="project-content">
-                <div className="project-badge">🚧 Work in Progress</div>
+                <div className="project-badge">🚧 Work in progress</div>
                 <h3>Automaton</h3>
-                <p>Python-powered website scraping and browser automation.</p>
+                <p>Python-powered web scraping and browser automation.</p>
               </div>
             </a>
           </div>
@@ -232,7 +224,7 @@ function App() {
         <div className="footer-right">
           <div className="footer-nav-section">
             <div className="footer-nav">
-              <p className="footer-nav-heading">Landing</p>
+              <p className="footer-nav-heading">Sections</p>
               <a href="#about">About Me</a>
               <a href="#skills">Skills</a>
               <a href="#experience">Experience</a>
@@ -250,8 +242,8 @@ function App() {
             <a href="https://www.sfu.ca/fas/study/future-undergraduates/programs/major/software-systems-bachelor-science.html" target="_blank" rel="noopener noreferrer" title="Simon Fraser University">
               <img src="/sfu-logo.png" alt="Simon Fraser University" className="footer-logo" />
             </a>
-            <a href="https://sfussss.org/" target="_blank" rel="noopener noreferrer" title="Software Systems Program">
-              <img src="/Adobe Express - file (1).png" alt="Software Systems Engineering" className="footer-logo" />
+            <a href="https://sfussss.org/" target="_blank" rel="noopener noreferrer" title="Software Systems Student Society">
+              <img src="/ssss-logo.png" alt="Software Systems Student Society" className="footer-logo" />
             </a>
           </div>
         </div>

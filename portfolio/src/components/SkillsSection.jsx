@@ -1,4 +1,3 @@
-import { Marquee } from '@/components/ui/marquee'
 import {
   FaPython,
   FaJava,
@@ -34,13 +33,10 @@ import {
   SiResend,
 } from 'react-icons/si'
 import { TbSql, TbApi, TbH2 } from 'react-icons/tb'
-import CursorIcon from './icons/CursorIcon'
 
 const SKILL_CATEGORIES = [
   {
     title: 'Backend & Programming',
-    direction: 'left',
-    speed: 34,
     skills: [
       { icon: FaPython, name: 'Python' },
       { icon: FaJava, name: 'Java' },
@@ -48,7 +44,7 @@ const SKILL_CATEGORIES = [
       { icon: SiC, name: 'C' },
       { icon: FaNodeJs, name: 'Node.js' },
       { icon: SiLua, name: 'Lua' },
-      { icon: TbSql, name: 'DB Design (SQL)' },
+      { icon: TbSql, name: 'SQL' },
       { icon: SiClerk, name: 'Clerk' },
       { icon: SiFastapi, name: 'FastAPI' },
       { icon: SiExpress, name: 'Express.js' },
@@ -58,8 +54,6 @@ const SKILL_CATEGORIES = [
   },
   {
     title: 'Frontend & Web',
-    direction: 'right',
-    speed: 38,
     skills: [
       { icon: FaHtml5, name: 'HTML' },
       { icon: FaCss3Alt, name: 'CSS' },
@@ -72,8 +66,6 @@ const SKILL_CATEGORIES = [
   },
   {
     title: 'Databases',
-    direction: 'left',
-    speed: 32,
     skills: [
       { icon: SiPostgresql, name: 'PostgreSQL' },
       { icon: TbH2, name: 'H2' },
@@ -84,8 +76,6 @@ const SKILL_CATEGORIES = [
   },
   {
     title: 'DevOps & Cloud',
-    direction: 'right',
-    speed: 36,
     skills: [
       { icon: FaDocker, name: 'Docker' },
       { icon: FaGitAlt, name: 'Git' },
@@ -96,41 +86,23 @@ const SKILL_CATEGORIES = [
       { icon: FaLinux, name: 'Linux' },
       { icon: FaGithub, name: 'GitHub' },
       { icon: SiRobloxstudio, name: 'Roblox Studio' },
-      { icon: CursorIcon, name: 'Cursor' },
     ],
   },
 ]
-
-function SkillMarqueeItem({ icon: SkillIcon, name }) {
-  return (
-    <span className="skill-icon skill-icon--marquee">
-      <SkillIcon aria-hidden="true" />
-      <span className="skill-name">{name}</span>
-    </span>
-  )
-}
 
 export default function SkillsSection() {
   return (
     <div className="skills-boxes">
       {SKILL_CATEGORIES.map((category) => (
-        <div className="skill-box skill-box--marquee" key={category.title}>
+        <div className="skill-box" key={category.title}>
           <h3>{category.title}</h3>
-          <div className="skill-marquee-track">
-            <Marquee
-              direction={category.direction}
-              speed={category.speed}
-              pauseOnHover
-              className="skill-marquee"
-            >
-              {category.skills.map((skill) => (
-                <SkillMarqueeItem
-                  key={skill.name}
-                  icon={skill.icon}
-                  name={skill.name}
-                />
-              ))}
-            </Marquee>
+          <div className="skill-pills">
+            {category.skills.map(({ icon: SkillIcon, name }) => (
+              <span className="skill-icon" key={name}>
+                <SkillIcon aria-hidden="true" />
+                <span className="skill-name">{name}</span>
+              </span>
+            ))}
           </div>
         </div>
       ))}

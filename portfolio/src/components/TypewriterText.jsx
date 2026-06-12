@@ -54,7 +54,7 @@ export default function TypewriterText({
           className={`typewriter-char${i < visibleCount ? ' is-visible' : ''}`}
           aria-hidden={i >= visibleCount}
         >
-          {char === ' ' ? '\u00A0' : char}
+          {char === ' ' ? ' ' : char}
         </span>
       ))}
       {showCursor && isTyping && (
