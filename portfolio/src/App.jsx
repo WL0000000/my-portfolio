@@ -3,7 +3,7 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useInView } from './useInView'
 import resumePdf from './assets/William_Li_Resume.pdf'
-import { FaGithub, FaLinkedin, FaInstagram, FaYoutube, FaDiscord, FaBullseye, FaGamepad, FaMapMarkerAlt, FaFileAlt, FaEnvelope } from 'react-icons/fa'
+import { FaGithub, FaLinkedin, FaInstagram, FaYoutube, FaDiscord, FaBullseye, FaGamepad, FaMapMarkerAlt, FaFileAlt, FaEnvelope, FaCode } from 'react-icons/fa'
 import { Analytics } from "@vercel/analytics/react"
 import CommandPalette from './CommandPalette'
 import ThemeToggle from './ThemeToggle'
@@ -109,18 +109,18 @@ function App() {
           </div>
           <div className="about-grid">
             <p>
-              Hi! I'm William Li, a Software Systems student at SFU and aspiring Software Developer.<br/><br/>
-              I enjoy building everything from games to secure systems. Currently, my passion lies within game development, where I focus on creating fun and engaging experiences for users on Roblox.<br/><br/>
-              I have a background in full-stack development, including React, Node.js, Docker, and AWS, and I am always eager to learn new technologies and improve my skills!
+              Second year Software Systems student at SFU, building applications and solving problems primarily in C++, with experience across React, TypeScript, Java, Python and more.<br/><br/>
+              I have designed and shipped scalable web apps, REST APIs and AI-backed systems, with hands-on experience using Docker, CI/CD pipelines and cloud platforms like AWS and GCP.<br/><br/>
+              Currently getting deeper into DevOps and cloud computing, and always looking for projects that push me to learn something new.
             </p>
             <ul className="stats">
               <li>
                 <span><FaBullseye /> Focus</span>
-                <strong>Full-stack development</strong>
+                <strong>DevOps, Cloud Computing</strong>
               </li>
               <li>
                 <span><FaGamepad /> Hobbies</span>
-                <strong>Competitive gaming, game dev, music production</strong>
+                <strong>Competitive gaming, doomscrolling, grinding LeetCode</strong>
               </li>
               <li>
                 <span><FaMapMarkerAlt /> Location</span>
@@ -144,14 +144,14 @@ function App() {
           <div className="experience-timeline">
             <div className="experience-item">
               <div className="experience-item-content">
-                <img src="/roblox-logo.png" alt="Roblox logo" className="experience-icon" />
+                <img src="/image.png" alt="Freelance Software Developer" className="experience-icon" />
                 <div className="experience-text">
                   <div className="experience-header">
-                    <h3>Roblox Game Developer</h3>
+                    <h3>Freelance Software Developer</h3>
                     <span className="experience-date">Jul 2025 - Present</span>
                   </div>
                   <p className="experience-company">Independent Developer</p>
-                  <p className="experience-description">Full-stack game development in Lua using Roblox Studio.</p>
+                  <p className="experience-description">Developed software and web applications for clients on commission.</p>
                 </div>
               </div>
             </div>

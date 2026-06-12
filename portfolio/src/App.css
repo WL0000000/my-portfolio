@@ -990,6 +990,14 @@
   background: var(--accent-subtle);
 }
 
+.experience-icon--react {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: var(--accent);
+}
+
 .experience-text {
   flex: 1;
   font-family: var(--font-body);
