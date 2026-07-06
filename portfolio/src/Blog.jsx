@@ -7,26 +7,32 @@ function Blog() {
   return (
     <div className="page">
       <header className="site-header">
-        <div className="header-left">
-          <div className="brand">William Li</div>
-          <nav className="nav">
-            <Link to="/">Home</Link>
-            <Link to="/blog">Blog</Link>
-            <a href={resumePdf} target="_blank" rel="noopener noreferrer">Resume</a>
-          </nav>
-        </div>
-        <div className="header-actions">
-          <ThemeToggle />
+        <div className="container">
+          <div className="header-left">
+            <div className="brand">William Li</div>
+            <nav className="nav">
+              <Link to="/">Home</Link>
+              <Link to="/blog">Blog</Link>
+              <a href={resumePdf} target="_blank" rel="noopener noreferrer">Resume</a>
+            </nav>
+          </div>
+          <div className="header-actions">
+            <ThemeToggle />
+          </div>
         </div>
       </header>
 
       <main>
         <section className="wip-section">
-          <div className="wip-content">
-            <h1>Blog</h1>
-            <p className="wip-text">Work In Progress</p>
-            <p className="wip-description">This page is currently under construction. Check back soon!</p>
-            <Link to="/" className="btn primary">Back to Home</Link>
+          <div className="container">
+            <div className="wip-content">
+              <p className="wip-kicker">Under construction</p>
+              <h1>Blog</h1>
+              <p className="wip-description">
+                Writing about systems, DevOps, and things I'm learning. First posts coming soon.
+              </p>
+              <Link to="/" className="btn ghost">← Back to home</Link>
+            </div>
           </div>
         </section>
       </main>

@@ -33,6 +33,7 @@ import {
   SiResend,
 } from 'react-icons/si'
 import { TbSql, TbApi, TbH2 } from 'react-icons/tb'
+import Reveal from './Reveal'
 
 const SKILL_CATEGORIES = [
   {
@@ -92,19 +93,21 @@ const SKILL_CATEGORIES = [
 
 export default function SkillsSection() {
   return (
-    <div className="skills-boxes">
-      {SKILL_CATEGORIES.map((category) => (
-        <div className="skill-box" key={category.title}>
-          <h3>{category.title}</h3>
-          <div className="skill-pills">
-            {category.skills.map(({ icon: SkillIcon, name }) => (
-              <span className="skill-icon" key={name}>
-                <SkillIcon aria-hidden="true" />
-                <span className="skill-name">{name}</span>
-              </span>
-            ))}
+    <div className="skills-list">
+      {SKILL_CATEGORIES.map((category, index) => (
+        <Reveal delay={0.05 + index * 0.06} key={category.title}>
+          <div className="skill-row">
+            <h3>{category.title}</h3>
+            <div className="skill-pills">
+              {category.skills.map(({ icon: SkillIcon, name }) => (
+                <span className="skill-icon" key={name}>
+                  <SkillIcon aria-hidden="true" />
+                  <span className="skill-name">{name}</span>
+                </span>
+              ))}
+            </div>
           </div>
-        </div>
+        </Reveal>
       ))}
     </div>
   )
