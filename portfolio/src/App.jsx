@@ -65,8 +65,7 @@ function App() {
               </HeroReveal>
               <HeroReveal order={2}>
                 <p className="lead">
-                  Software Systems student at <strong>SFU</strong>, solving problems in{' '}
-                  <strong>C++</strong> and shipping full-stack apps with React, Docker, and the cloud.
+                  Software Systems student at <strong>SFU</strong> and aspiring Software Engineer. Feel free to explore my website!
                 </p>
               </HeroReveal>
               <HeroReveal order={3}>
@@ -97,8 +96,8 @@ function App() {
                 <div className="about-grid">
                   <div className="about-prose">
                     <p>
-                      Second year Software Systems student at SFU, building applications and solving
-                      problems primarily in <strong>C++</strong>, with experience across React,
+                      Hi! I'm William, a second year Software Systems student at SFU, building applications and solving
+                      problems primarily in C++, with experience across React,
                       TypeScript, Java, Python and more.
                     </p>
                     <p>
@@ -198,7 +197,7 @@ function App() {
 
           <section className="section" id="projects">
             <div className="container">
-              <SectionHead title="Projects" meta="02 selected" />
+              <SectionHead title="Projects" meta="04 selected" />
               <div className="cards">
                 <Reveal delay={0.05}>
                   <SpotlightCard
@@ -213,7 +212,7 @@ function App() {
                     </div>
                     <div className="project-body">
                       <div className="project-meta">
-                        <span className="project-tag project-tag--win">Winner — SystemHacks 2026</span>
+                        <span className="project-tag project-tag--win">Winner · SystemHacks 2026</span>
                         <span className="project-arrow" aria-hidden="true">↗</span>
                       </div>
                       <h3>Escape From Windows</h3>
@@ -222,6 +221,27 @@ function App() {
                   </SpotlightCard>
                 </Reveal>
                 <Reveal delay={0.12}>
+                  <SpotlightCard
+                    as="a"
+                    href="https://github.com/bobbychan-cmpt/final-project-group-30"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="project-card"
+                  >
+                    <div className="project-media">
+                      <img src="/ondeck.png" alt="OnDeck course management dashboard" loading="lazy" />
+                    </div>
+                    <div className="project-body">
+                      <div className="project-meta">
+                        <span className="project-tag">Full-stack · Team of 5</span>
+                        <span className="project-arrow" aria-hidden="true">↗</span>
+                      </div>
+                      <h3>OnDeck</h3>
+                      <p>Realtime office hours queueing and analytics for large courses.</p>
+                    </div>
+                  </SpotlightCard>
+                </Reveal>
+                <Reveal delay={0.19}>
                   <SpotlightCard
                     as="a"
                     href="https://github.com/WL0000000/python-automaton"
@@ -241,6 +261,27 @@ function App() {
                       </div>
                       <h3>Automaton</h3>
                       <p>Python-powered web scraping and browser automation.</p>
+                    </div>
+                  </SpotlightCard>
+                </Reveal>
+                <Reveal delay={0.26}>
+                  <SpotlightCard
+                    as="a"
+                    href="https://github.com/WL0000000/peakprep-sfu"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="project-card"
+                  >
+                    <div className="project-media">
+                      <img src="/peakprep.png" alt="PeakPrep SFU course guide landing page" loading="lazy" />
+                    </div>
+                    <div className="project-body">
+                      <div className="project-meta">
+                        <span className="project-tag">In development</span>
+                        <span className="project-arrow" aria-hidden="true">↗</span>
+                      </div>
+                      <h3>PeakPrep</h3>
+                      <p>Everything you wish you knew about an SFU course before enrolling.</p>
                     </div>
                   </SpotlightCard>
                 </Reveal>
