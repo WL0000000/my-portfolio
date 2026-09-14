@@ -227,49 +227,6 @@
   }
 }
 
-.hero-status {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  font-family: var(--font-mono);
-  font-size: 0.78rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--muted);
-  margin-bottom: 28px;
-}
-
-.status-dot {
-  position: relative;
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: var(--ok);
-  flex-shrink: 0;
-}
-
-.status-dot::after {
-  content: '';
-  position: absolute;
-  inset: -3px;
-  border-radius: 50%;
-  border: 1px solid var(--ok);
-  opacity: 0;
-  animation: statusPulse 2.4s ease-out infinite;
-}
-
-@keyframes statusPulse {
-  0% {
-    transform: scale(0.6);
-    opacity: 0.8;
-  }
-  70%,
-  100% {
-    transform: scale(1.6);
-    opacity: 0;
-  }
-}
-
 .hero h1 {
   font-size: clamp(2.75rem, 7vw, 4.25rem);
   font-weight: 600;

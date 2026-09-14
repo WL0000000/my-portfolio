@@ -55,20 +55,14 @@ function App() {
             <div className="hero-glow" aria-hidden="true" />
             <div className="container">
               <HeroReveal order={0}>
-                <p className="hero-status">
-                  <span className="status-dot" aria-hidden="true" />
-                  SWE Intern @ Vici Learning · Summer 2026
-                </p>
-              </HeroReveal>
-              <HeroReveal order={1}>
                 <h1>William Li</h1>
               </HeroReveal>
-              <HeroReveal order={2}>
+              <HeroReveal order={1}>
                 <p className="lead">
                   Software Systems student at <strong>SFU</strong> and aspiring Software Engineer. Feel free to explore my website!
                 </p>
               </HeroReveal>
-              <HeroReveal order={3}>
+              <HeroReveal order={2}>
                 <div className="hero-actions">
                   <a className="btn primary" href="#contact">Get in touch</a>
                   <a className="btn ghost" href={resumePdf} target="_blank" rel="noopener noreferrer">
@@ -76,7 +70,7 @@ function App() {
                   </a>
                 </div>
               </HeroReveal>
-              <HeroReveal order={4}>
+              <HeroReveal order={3}>
                 <div className="hero-socials">
                   <a href="https://github.com/WL0000000" target="_blank" rel="noopener noreferrer" title="GitHub" aria-label="GitHub"><FaGithub /></a>
                   <a href="https://www.linkedin.com/in/william-li-6283aa333/" target="_blank" rel="noopener noreferrer" title="LinkedIn" aria-label="LinkedIn"><FaLinkedin /></a>
@@ -96,7 +90,7 @@ function App() {
                 <div className="about-grid">
                   <div className="about-prose">
                     <p>
-                      Hi! I'm William, a second year Software Systems student at SFU, building applications and solving
+                      Hi! I'm William, a third year Software Systems student at SFU, building applications and solving
                       problems primarily in C++, with experience across React,
                       TypeScript, Java, Python and more.
                     </p>
@@ -112,8 +106,8 @@ function App() {
                   </div>
                   <ul className="facts">
                     <li>
-                      <span className="fact-label">Now</span>
-                      <span className="fact-value">SWE Intern @ Vici Learning</span>
+                      <span className="fact-label">Status</span>
+                      <span className="fact-value">Looking for SWE internships</span>
                     </li>
                     <li>
                       <span className="fact-label">Focus</span>
@@ -162,15 +156,16 @@ function App() {
                 </Reveal>
                 <Reveal delay={0.12}>
                   <div className="experience-item">
-                    <img src="/image.png" alt="Freelance Software Developer" className="experience-icon" />
+                    <img src="/campaign.svg" alt="Campaign Technology & Communications Consultant" className="experience-icon" />
                     <div className="experience-text">
                       <div className="experience-header">
-                        <h3>Freelance Software Developer</h3>
-                        <span className="experience-date">Jul 2025 — present</span>
+                        <h3>Campaign Technology &amp; Communications Consultant</h3>
+                        <span className="experience-date">Jul 2026 — Oct 2026</span>
                       </div>
-                      <p className="experience-company">Independent Developer</p>
+                      <p className="experience-company">SD43 School Trustee Campaign</p>
                       <p className="experience-description">
-                        Developed software and web applications for clients on commission.
+                        Led the technology strategy for an SD43 School Trustee Candidate before and
+                        during election.
                       </p>
                     </div>
                   </div>

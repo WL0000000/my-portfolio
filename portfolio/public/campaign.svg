@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" role="img" aria-label="Ballot box">
+  <rect width="200" height="200" fill="#0c0c0e"/>
+  <g transform="rotate(-8 100 74)">
+    <rect x="72" y="40" width="56" height="68" rx="4" fill="#ececf4"/>
+    <path d="M84 73 L95 85 L117 58" fill="none" stroke="#4f46e5" stroke-width="9"
+          stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <rect x="40" y="112" width="120" height="52" rx="6" fill="#6366f1"/>
+  <rect x="34" y="97" width="132" height="19" rx="4" fill="#818cf8"/>
+  <rect x="76" y="102" width="48" height="8" rx="4" fill="#0c0c0e"/>
+</svg>
