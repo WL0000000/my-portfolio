@@ -90,7 +90,7 @@ function App() {
                 <div className="about-grid">
                   <div className="about-prose">
                     <p>
-                      Hi! I'm William, a third year Software Systems student at SFU, building applications and solving
+                      Hi! I'm William, a third year Software Systems student at SFU, building systems and solving
                       problems primarily in C++, with experience across React,
                       TypeScript, Java, Python and more.
                     </p>
@@ -107,7 +107,7 @@ function App() {
                   <ul className="facts">
                     <li>
                       <span className="fact-label">Status</span>
-                      <span className="fact-value">Looking for SWE internships</span>
+                      <span className="fact-value">Building a Roblox Game</span>
                     </li>
                     <li>
                       <span className="fact-label">Focus</span>
