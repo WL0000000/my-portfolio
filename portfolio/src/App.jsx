@@ -160,7 +160,7 @@ function App() {
                     <div className="experience-text">
                       <div className="experience-header">
                         <h3>Campaign Technology &amp; Communications Consultant</h3>
-                        <span className="experience-date">Jul 2026 — Oct 2026</span>
+                        <span className="experience-date">Aug 2026 — Oct 2026</span>
                       </div>
                       <p className="experience-company">SD43 School Trustee Campaign</p>
                       <p className="experience-description">
